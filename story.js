@@ -81,7 +81,7 @@ const STORY = {
         "Behind you, Glorp is already trying to call his wife, visibly upset.",
         "Maybe this is just better to not deal with right now. “Hey,” you whisper to the orb, “come find me when you’re done, and I’ll fix you up.”",
         "“How the fuck am I supposed to find you?” the orb replies. “I’m an orb. Just roll around this place? You know how many god damn stairs we have? Hell, I don’t know how the fuck to even go up a stair.”",
-        "“You’re the hex support. How about you just come to me in an hour, after their meeting, and fix me the fuck up? Please don’t make me go through puberty again.”",
+        "“You’re the hex support. How about you just come to me in an hour, after their meeting, and fix me the fuck up?”",
       ],
       choices: [],
     },
