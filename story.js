@@ -65,7 +65,7 @@ const STORY = {
         "“I swear to god, if she takes the Silverlight cape because of that, I will find you and turn you into my next orb. Get the fuck out of my sanctum.”",
       ],
       choices: [
-        { text: "Get out of the sanctum", to: "stairwell" },
+        { text: "Get out of the fucking sanctum", to: "stairwell" },
         { text: "Tell her the meeting isn’t until 8", to: "early" },
       ],
     },
