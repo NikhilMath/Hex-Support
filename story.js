@@ -57,6 +57,21 @@ const STORY = {
         "Glorp turns to look at you very, very slowly.",
         "“I swear to god, if she takes the Silverlight cape because of that, I will find you and turn you into my next orb. Get the fuck out of my sanctum.”",
       ],
+      choices: [
+        { text: "Get out of the sanctum", to: "stairwell" },
+        { text: "Tell her the meeting isn’t until 8", to: "early" },
+      ],
+    },
+
+    stairwell: {
+      title: "The Stairwell",
+      text: [
+        "You back out of the sanctum. The door slams so hard a portrait of Glorp’s mother falls off the wall.",
+        "You sit on the top step with your lukewarm coffee and listen through the door.",
+        "The lawyer’s voice drones on. “Item one. The Silverlight cape.”",
+        "A long pause. Then Glorp screams, “NOT THE CAPE!”",
+        "Behind the door, the baby orb starts crying. You get the feeling Glorp is about to come looking for someone to turn into an orb.",
+      ],
       choices: [],
     },
 
