@@ -77,7 +77,7 @@ const STORY = {
         "“He installed Necro-Link 4.0,” the orb whispers. “It talks to the dead now. All of them. At once.”",
         "“Omg, you’re suffering right now. Really bad,” you say. “Can you do me a favor, though?”",
         "“I really don’t think this is a good time for me...” the orb says hesitantly.",
-        "“Great. My dad, I need you to find him and ask him for the garage door code. They’re charging 50 bucks to reset it, and I really just blew my money on this weird potion.”",
+        "“Great. My dad, I need you to find him and ask him for the garage door code.”",
         "Behind you, Glorp is already trying to call his wife, visibly upset.",
         "Maybe this is just better to not deal with right now. “Hey,” you whisper to the orb, “come find me when you’re done, and I’ll fix you up.”",
         "“How the fuck am I supposed to find you?” the orb replies. “I’m an orb. Just roll around this place? You know how many god damn stairs we have? Hell, I don’t know how the fuck to even go up a stair.”",
