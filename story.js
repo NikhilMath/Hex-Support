@@ -104,6 +104,20 @@ const STORY = {
         "Plonk’s voice booms across the whole valley: “THAT IS KIDNAPPING. THAT IS ORB-NAPPING.”",
         "A crow lands on your shoulder with a tiny scroll tied to its leg. It says: <em>This is counsel for the deceased. We should talk.</em>",
       ],
+      choices: [
+        { text: "Meet the lawyer", to: "lawyer" },
+        { text: "Find a quiet spot and fix the orb", to: "uninstall" },
+      ],
+    },
+
+    lawyer: {
+      title: "The Lawyer",
+      text: [
+        "You follow the crow to a crypt at the edge of town. The skeleton in the tie is waiting on a bench with a briefcase on his lap.",
+        "“My client wants the orb,” he says. “Under the law of the dead, whoever the orb calls mama gets custody.”",
+        "He slides a scroll across the bench. “So. How much do you want for it?”",
+        "In your arms, the orb wakes up and blinks at him. “Mama, who’s the bone man?”",
+      ],
       choices: [],
     },
 
