@@ -152,7 +152,7 @@ const STORY = {
       title: "Clocked Out",
       ending: true,
       text: [
-        "You pocket the garage code, pat the orb twice, and say, “I’ll put in a ticket.”",
+        "You scribble 1234 on the back of your hand so you don’t forget it, pat the orb twice, and say, “I’ll put in a ticket.”",
         "“You son of a—” the orb starts, but you’re already on the stairs.",
         "That night, you punch 1234 into the keypad and the garage door rolls open on the first try. Best day of your life.",
         "Somewhere in a stone tower, an orb is still whispering, “Please... kill me.”",
