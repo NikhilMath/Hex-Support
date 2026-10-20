@@ -19,8 +19,31 @@ const STORY = {
       title: "The Tower",
       text: [
         "You’re standing in a stone tower at 7 a.m., holding a lukewarm coffee, while a 900-year-old wizard named Gorb jabs a crusty finger at a glowing orb.",
-        "“This piece of shit stopped working the second I updated it,” he snaps. “I have a meeting with my dead wife and her lawyer about our assets for the divorce. God, even in death this bitch ruins my life.”",
+        "“This piece of shit stopped working the second I updated it,” he snaps. “I have a meeting at 8 with my dead wife and her lawyer about our assets for the divorce. God, even in death this bitch ruins my life.”",
         "The orb flickers. A tiny voice inside it whispers, “Please... kill me.”",
+      ],
+      choices: [
+        { text: "Turn it off and on again", to: "reboot" },
+        { text: "Ask the orb what’s wrong", to: "ask" },
+      ],
+    },
+
+    reboot: {
+      title: "Off and On Again",
+      text: [
+        "You set your coffee down, find the little rune on the back of the orb, and hold it for ten seconds.",
+        "The glow dies. Gorb gasps like you just drowned a kitten.",
+        "Then the orb blinks back to life, and the tiny voice groans, “Oh no. Not again.”",
+      ],
+      choices: [],
+    },
+
+    ask: {
+      title: "Ask the Orb",
+      text: [
+        "You lean in close. “Hey, buddy. What’s going on in there?”",
+        "“He installed Necro-Link 4.0,” the orb whispers. “It talks to the dead now. All of them. At once.”",
+        "Behind you, Gorb is already trying to call his wife.",
       ],
       choices: [],
     },

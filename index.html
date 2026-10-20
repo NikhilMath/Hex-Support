@@ -12,6 +12,18 @@
       <p class="site-title">Hex Support</p>
     </header>
 
+    <details class="story-map" open>
+      <summary>Story map</summary>
+      <div class="map-scroll">
+        <svg id="map-svg" aria-label="Story map"></svg>
+      </div>
+      <p class="map-legend">
+        <span class="key key-current"></span> You are here
+        <span class="key key-visited"></span> Visited
+        <span class="key key-unvisited"></span> Not yet
+      </p>
+    </details>
+
     <article id="passage" aria-live="polite">
       <h1 id="passage-title" tabindex="-1"></h1>
       <div id="passage-text"></div>
@@ -29,6 +41,7 @@
   </noscript>
 
   <script src="story.js"></script>
+  <script src="map.js"></script>
   <script src="game.js"></script>
 </body>
 </html>

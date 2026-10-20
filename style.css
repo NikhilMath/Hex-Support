@@ -6,6 +6,7 @@
   --accent: #5b3fa6;
   --accent-text: #ffffff;
   --border: #e2ddd3;
+  --border-strong: #c4bcae;
   --font-body: Georgia, "Times New Roman", serif;
   --font-ui: system-ui, -apple-system, "Segoe UI", sans-serif;
 }
@@ -19,6 +20,7 @@
     --accent: #a98bf0;
     --accent-text: #16141a;
     --border: #34303d;
+    --border-strong: #645c74;
   }
 }
 
@@ -53,6 +55,134 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
+}
+
+.story-map {
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--surface);
+  font-family: var(--font-ui);
+}
+
+.story-map summary {
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.map-scroll {
+  overflow-x: auto;
+  padding: 0 1rem;
+}
+
+#map-svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.map-node rect {
+  fill: var(--bg);
+  stroke: var(--border-strong);
+  stroke-width: 1;
+}
+
+.map-node text {
+  fill: var(--muted);
+  font-family: var(--font-ui);
+  font-size: 12px;
+}
+
+.map-node.visited rect {
+  stroke: var(--accent);
+}
+
+.map-node.visited text {
+  fill: var(--text);
+}
+
+.map-node.current rect {
+  fill: var(--accent);
+  stroke: var(--accent);
+}
+
+.map-node.current text {
+  fill: var(--accent-text);
+  font-weight: 600;
+}
+
+.map-node.missing rect,
+.map-node.unreachable rect {
+  stroke-dasharray: 4 3;
+}
+
+.map-node.missing text {
+  font-style: italic;
+}
+
+.map-node:hover rect,
+.map-node:focus-visible rect {
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+
+.map-node:focus {
+  outline: none;
+}
+
+.map-edge {
+  fill: none;
+  stroke: var(--border-strong);
+  stroke-width: 1.5;
+}
+
+.map-edge.walked {
+  stroke: var(--accent);
+}
+
+.map-edge.back {
+  stroke-dasharray: 4 3;
+}
+
+.map-arrow {
+  fill: var(--border-strong);
+}
+
+.map-arrow.walked {
+  fill: var(--accent);
+}
+
+.map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.375rem 0.75rem;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.key {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-right: -0.375rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 0.1875rem;
+  background: var(--bg);
+  vertical-align: middle;
+}
+
+.key-current {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.key-visited {
+  border-color: var(--accent);
 }
 
 #passage-title {

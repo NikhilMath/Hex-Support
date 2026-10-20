@@ -7,6 +7,11 @@
   const textEl = document.getElementById("passage-text");
   const choicesEl = document.getElementById("choices");
   const restartBtn = document.getElementById("restart");
+  const mapSvg = document.getElementById("map-svg");
+
+  // What the reader has seen this visit, for the map.
+  const trail = { visited: new Set(), walked: new Set() };
+  let lastId = null;
 
   function currentId() {
     return decodeURIComponent(location.hash.slice(1)) || STORY.start;
@@ -26,10 +31,7 @@
     return a;
   }
 
-  function render() {
-    const id = currentId();
-    const passage = STORY.passages[id];
-
+  function showPassage(id, passage) {
     if (!passage) {
       titleEl.textContent = "Lost";
       const p = document.createElement("p");
@@ -54,12 +56,32 @@
     }
 
     document.title = passage.title ? `${passage.title} · Hex Support` : "Hex Support";
+  }
+
+  function render() {
+    const id = currentId();
+    const passage = STORY.passages[id];
+
+    const last = lastId && STORY.passages[lastId];
+    if (last && (last.choices || []).some((c) => c.to === id)) {
+      trail.walked.add(`${lastId}→${id}`);
+    }
+    trail.visited.add(id);
+    lastId = id;
+
+    showPassage(id, passage);
+    drawStoryMap(mapSvg, STORY, id, trail);
+
     window.scrollTo(0, 0);
     titleEl.focus({ preventScroll: true });
   }
 
   restartBtn.addEventListener("click", () => {
-    location.hash = STORY.start;
+    trail.visited.clear();
+    trail.walked.clear();
+    lastId = null;
+    if (currentId() === STORY.start) render();
+    else location.hash = STORY.start;
   });
 
   window.addEventListener("hashchange", render);
