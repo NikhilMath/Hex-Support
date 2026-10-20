@@ -87,6 +87,20 @@ const STORY = {
         "“How the fuck am I supposed to find you?” the orb replies. “I’m an orb. Just roll around this place? You know how many god damn stairs we have? Hell, I don’t know how the fuck to even go up a stair.”",
         "“You’re the hex support. How about you just come to me in an hour, after their meeting, and fix me the fuck up?”",
       ],
+      choices: [
+        { text: "Promise to come back after the meeting", to: "after" },
+        { text: "Reboot it anyway", to: "reboot" },
+      ],
+    },
+
+    after: {
+      title: "After the Meeting",
+      text: [
+        "At 9 a.m. on the dot, you slip back into the sanctum with a fresh coffee.",
+        "Glorp is face-down on his desk, snoring into a pile of divorce scrolls. The one on top says <em>Exhibit C: The Orb</em>.",
+        "The orb glows weakly. “I found your dad,” it whispers. “Necro-Link put him on the call with everyone else. He says the garage code is 1234, and he’s not mad, just disappointed.”",
+        "“Now,” the orb says, “you promised. Fix me the fuck up.”",
+      ],
       choices: [],
     },
   },

@@ -126,12 +126,8 @@ function drawStoryMap(svg, story, currentId, trail) {
   for (const id of order) {
     const from = pos.get(id);
     for (const c of choicesOf(id)) {
+      if (c.to === id) continue;
       const to = pos.get(c.to);
-      const x1 = from.x + NODE_W / 2;
-      const y1 = from.y + NODE_H;
-      const x2 = to.x + NODE_W / 2;
-      const y2 = to.y;
-      const bend = Math.max(GAP_Y / 2, Math.abs(y2 - y1) / 2);
       const walked = trail.walked.has(`${id}→${c.to}`);
 
       const classes = ["map-edge"];
@@ -139,7 +135,7 @@ function drawStoryMap(svg, story, currentId, trail) {
       if (row.get(c.to) <= row.get(id)) classes.push("back");
 
       const path = el("path", {
-        d: `M${x1},${y1} C${x1},${y1 + bend} ${x2},${y2 - bend} ${x2},${y2}`,
+        d: edgePath(from, to, row.get(id), row.get(c.to)),
         class: classes.join(" "),
         "marker-end": `url(#${walked ? "map-arrow-walked" : "map-arrow"})`,
       });
@@ -179,6 +175,31 @@ function drawStoryMap(svg, story, currentId, trail) {
   }
 
   return { deadEnds: Object.keys(passages).filter((id) => choicesOf(id).length === 0).length };
+
+  // Down the map: bottom of one box to the top of the next. Back up the
+  // map: top to bottom. Same row: side to side if the boxes are next to
+  // each other, otherwise an arc over the top so it doesn't cross boxes.
+  function edgePath(from, to, fromRow, toRow) {
+    const cx1 = from.x + NODE_W / 2;
+    const cx2 = to.x + NODE_W / 2;
+
+    if (fromRow !== toRow) {
+      const down = toRow > fromRow;
+      const y1 = down ? from.y + NODE_H : from.y;
+      const y2 = down ? to.y : to.y + NODE_H;
+      const bend = Math.max(GAP_Y / 2, Math.abs(y2 - y1) / 2) * (down ? 1 : -1);
+      return `M${cx1},${y1} C${cx1},${y1 + bend} ${cx2},${y2 - bend} ${cx2},${y2}`;
+    }
+
+    const midY = from.y + NODE_H / 2;
+    if (Math.abs(to.x - from.x) <= STEP + 1) {
+      const x1 = to.x > from.x ? from.x + NODE_W : from.x;
+      const x2 = to.x > from.x ? to.x : to.x + NODE_W;
+      return `M${x1},${midY} L${x2},${midY}`;
+    }
+    const top = from.y - GAP_Y * 0.6;
+    return `M${cx1},${from.y} C${cx1},${top} ${cx2},${top} ${cx2},${to.y}`;
+  }
 
   function el(tag, attrs = {}) {
     const node = document.createElementNS("http://www.w3.org/2000/svg", tag);
