@@ -150,12 +150,25 @@ const STORY = {
 
     clockout: {
       title: "Clocked Out",
-      ending: true,
       text: [
         "You scribble 1234 on the back of your hand so you don’t forget it, pat the orb twice, and say, “I’ll put in a ticket.”",
         "“You son of a—” the orb starts, but you’re already on the stairs.",
         "That night, you punch 1234 into the keypad and the garage door rolls open on the first try. Best day of your life.",
         "Somewhere in a stone tower, an orb is still whispering, “Please... kill me.”",
+      ],
+      choices: [
+        { text: "Step into the garage", to: "garage" },
+        { text: "Go back tomorrow and actually fix the orb", to: "uninstall" },
+      ],
+    },
+
+    garage: {
+      title: "The Garage",
+      text: [
+        "The light flickers on. Everything is exactly where your dad left it: the workbench, the lawnmower, the jar of screws he never sorted.",
+        "And your dad, sitting in his old lawn chair, slightly see-through.",
+        "“Took you long enough,” he says. “Some orb woke me up this morning asking for the garage code. Six years dead, and that’s the first time anybody’s called.”",
+        "He squints at the back of your hand. “You wrote it on your hand? I raised you better than that.”",
       ],
       choices: [],
     },
