@@ -168,7 +168,7 @@ const STORY = {
         "The light flickers on. Everything is exactly where your dad left it: the workbench, the lawnmower, the jar of screws he never sorted.",
         "And your dad, sitting in his old lawn chair, slightly see-through.",
         "“Took you long enough,” he says. “Some orb woke me up this morning asking for the garage code. Six years dead, and that’s the first time anybody’s called.”",
-        "He squints at the back of your hand. “You wrote it on your hand? Jesus Christ, how dumb are you? It’s four numbers in sequential order, and it starts with the first number!”",
+        "He squints at the back of your hand. “You wrote it on your hand? Jesus Christ, how dumb are you? It’s four numbers in sequential order, and it starts with 1!”",
       ],
       choices: [],
     },
