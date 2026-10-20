@@ -38,6 +38,34 @@ const STORY = {
         "“Well, hey, can you do Wizcast? I need to do a meeting. Are you smart enough for that?”",
         "The orb starts broadcasting Wizcast, and a half-decayed woman answers.",
       ],
+      choices: [
+        { text: "Hit mute before Gorb says anything", to: "mute" },
+        { text: "Tell her the meeting isn’t until 8", to: "early" },
+      ],
+    },
+
+    mute: {
+      title: "The Mute Rune",
+      text: [
+        "You lunge for the orb and tap what you’re pretty sure is the mute rune.",
+        "It is not the mute rune. The baby orb doesn’t know what mute is. It only knows the last thing it heard, and it says it in Gorb’s voice:",
+        "“Even in death this bitch ruins my life.”",
+        "On the other side of the call, a little more of her face rots off.",
+        "A skeleton in a tie leans into the frame. “Counsel for the deceased,” he says. “We’ll be adding that to the filing.”",
+        "Gorb turns to look at you very, very slowly.",
+      ],
+      choices: [],
+    },
+
+    early: {
+      title: "Mama?",
+      text: [
+        "“Uh, ma’am,” you say, “the meeting isn’t until 8.”",
+        "She doesn’t even look at you. “The dead don’t do clocks, Gorb. You’re late. You were always late.”",
+        "Behind her, a skeleton in a tie flips over a tiny hourglass. “Billing starts now.”",
+        "“Let’s start with the assets,” she says. “I want the orb. I was there when it hatched.”",
+        "The baby orb flickers, looks right at her, and whispers, “Mama?”",
+      ],
       choices: [],
     },
 

@@ -42,17 +42,53 @@ function drawStoryMap(svg, story, currentId, trail) {
   const rows = [];
   for (const id of order) (rows[row.get(id)] ||= []).push(id);
 
-  const widest = Math.max(...rows.map((r) => r.length));
-  const width = widest * NODE_W + (widest - 1) * GAP_X + PAD * 2;
+  // Which passages lead down into each passage from the row above.
+  const parents = new Map();
+  for (const id of order) {
+    for (const c of choicesOf(id)) {
+      if (row.get(id) < row.get(c.to)) {
+        if (!parents.has(c.to)) parents.set(c.to, []);
+        parents.get(c.to).push(id);
+      }
+    }
+  }
+
+  // Put each box under the passages that lead to it, pushing boxes apart
+  // where they would overlap. Positions here are box centers around 0.
+  const STEP = NODE_W + GAP_X;
+  const center = new Map();
+  for (const ids of rows) {
+    const wanted = new Map();
+    for (const id of ids) {
+      const ps = parents.get(id);
+      if (ps) wanted.set(id, ps.reduce((sum, p) => sum + center.get(p), 0) / ps.length);
+    }
+
+    // The start row, and passages nothing links to, are just centered.
+    if (wanted.size < ids.length) {
+      ids.forEach((id, i) => center.set(id, (i - (ids.length - 1) / 2) * STEP));
+      continue;
+    }
+
+    const sorted = [...ids].sort((a, b) => wanted.get(a) - wanted.get(b));
+    let x = -Infinity;
+    for (const id of sorted) {
+      x = Math.max(wanted.get(id), x + STEP);
+      center.set(id, x);
+    }
+    const drift = sorted.reduce((sum, id) => sum + center.get(id) - wanted.get(id), 0) / sorted.length;
+    for (const id of sorted) center.set(id, center.get(id) - drift);
+  }
+
+  const xs = [...center.values()];
+  const left = Math.min(...xs) - NODE_W / 2;
+  const width = Math.max(...xs) - Math.min(...xs) + NODE_W + PAD * 2;
   const height = rows.length * NODE_H + (rows.length - 1) * GAP_Y + PAD * 2;
 
   const pos = new Map();
   rows.forEach((ids, r) => {
-    const rowWidth = ids.length * NODE_W + (ids.length - 1) * GAP_X;
-    let x = (width - rowWidth) / 2;
     for (const id of ids) {
-      pos.set(id, { x, y: PAD + r * (NODE_H + GAP_Y) });
-      x += NODE_W + GAP_X;
+      pos.set(id, { x: center.get(id) - NODE_W / 2 - left + PAD, y: PAD + r * (NODE_H + GAP_Y) });
     }
   });
 
@@ -60,6 +96,8 @@ function drawStoryMap(svg, story, currentId, trail) {
   svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
   svg.setAttribute("width", width);
   svg.setAttribute("height", height);
+  // Shrink a little to fit narrow screens, then scroll sideways instead.
+  svg.style.minWidth = `${Math.round(width * 0.8)}px`;
 
   const defs = el("defs");
   for (const [id, cls] of [["map-arrow", "map-arrow"], ["map-arrow-walked", "map-arrow walked"]]) {
