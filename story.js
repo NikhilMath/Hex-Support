@@ -72,6 +72,21 @@ const STORY = {
         "A long pause. Then Glorp screams, “NOT THE CAPE!”",
         "Behind the door, the baby orb starts crying. You get the feeling Glorp is about to come looking for someone to turn into an orb.",
       ],
+      choices: [
+        { text: "Make a run for it", to: "run" },
+        { text: "Sneak back in and kill the call", to: "uninstall" },
+      ],
+    },
+
+    run: {
+      title: "Down the Stairs",
+      text: [
+        "You leave your coffee on the step and bolt.",
+        "The stairs spiral down, and down, and down. Glorp has a lot of stairs.",
+        "Halfway down, you hear it behind you. Bonk. Bonk. Bonk. The baby orb is bouncing down the steps after you, one at a time.",
+        "“Mama!” it squeals. “Mama, wait!”",
+        "Far above, a door bangs open, and Glorp bellows, “WHERE IS MY ORB?”",
+      ],
       choices: [],
     },
 
