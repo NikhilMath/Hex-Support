@@ -9,6 +9,8 @@
   const restartBtn = document.getElementById("restart");
   const mapSvg = document.getElementById("map-svg");
   const deadEndCount = document.getElementById("dead-end-count");
+  const sceneCount = document.getElementById("scene-count");
+  sceneCount.textContent = `Scenes: ${Object.keys(STORY.passages).length} of ${STORY.targetScenes}`;
 
   // What the reader has seen this visit, for the map.
   const trail = { visited: new Set(), walked: new Set() };
