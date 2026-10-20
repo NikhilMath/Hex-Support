@@ -171,10 +171,38 @@ const STORY = {
     uninstall: {
       title: "Uninstall?",
       text: [
-        "You crack your knuckles and tap the orb twice. A list of installed spells floats up in front of you.",
-        "There it is, right at the top: <em>Necro-Link 4.0, installed by Plonk, today</em>.",
-        "You hit Uninstall. A little box pops up: <em>Are you sure? 4,816,203 dead people will be disconnected.</em>",
-        "From inside the orb, millions of tiny voices all say, “Wait—”",
+        "You crack your knuckles, tap the orb twice, and say the words every hex support tech knows by heart: “Okay. Let’s take a look.”",
+        "A list of installed spells floats up in front of you:",
+        "<em>Fireball (free trial, 3 days left)</em><br><em>Paperclip Familiar (“It looks like you’re casting a spell!”)</em><br><em>Toolbar of Endless Searching</em><br><em>Necro-Link 4.0, installed by Plonk at 6:58 a.m.</em>",
+        "Under Necro-Link, in tiny letters: <em>Talk to all your dead loved ones at once! Also everyone else’s.</em>",
+        "Well, that explains a lot. You hit Uninstall.",
+        "A little box pops up: <em>Are you sure? 4,816,203 dead people will be disconnected. This cannot be undone.</em>",
+        "From inside the orb, four million tiny voices all say, “Wait—”",
+      ],
+      choices: [
+        { text: "Click Yes", to: "uninstalled" },
+        { text: "Click No and hear them out", to: "dead" },
+      ],
+    },
+
+    uninstalled: {
+      title: "Uninstalled",
+      text: [
+        "You click Yes.",
+        "Four million voices scream at once, then cut out like someone yanked a plug. The silence is incredible.",
+        "The orb flickers, clears, and settles into a calm, steady glow. For the first time since the update, it sounds fine.",
+        "“Oh, thank god,” it says.",
+        "Then a new box pops up: <em>Necro-Link 5.0 is available! Install now?</em>",
+      ],
+      choices: [],
+    },
+
+    dead: {
+      title: "The Dead Speak",
+      text: [
+        "You click No. Four million dead people sigh with relief.",
+        "Then they all start talking at once. Someone wants to know if their cat is okay. Someone wants their dentures back. Someone just keeps saying, “Gary? Gary?”",
+        "One voice cuts through the noise, calm and very organized. “We have a list of demands,” it says.",
       ],
       choices: [],
     },

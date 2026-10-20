@@ -61,7 +61,12 @@ body {
   color: var(--muted);
 }
 
+/* The map can spread wider than the reading column on big screens. */
 .story-map {
+  position: relative;
+  left: 50%;
+  width: min(64rem, calc(100vw - 2rem));
+  transform: translateX(-50%);
   margin-bottom: 2rem;
   border: 1px solid var(--border);
   border-radius: 0.5rem;
