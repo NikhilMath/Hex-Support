@@ -116,6 +116,32 @@ const STORY = {
         "The orb glows weakly. “I found your dad,” it whispers. “Necro-Link put him on the call with everyone else. He says the garage code is 1234, and he’s not mad, just disappointed.”",
         "“Now,” the orb says, “you promised. Fix me the fuck up.”",
       ],
+      choices: [
+        { text: "Uninstall Necro-Link", to: "uninstall" },
+        { text: "Take the code and clock out", to: "clockout" },
+      ],
+    },
+
+    uninstall: {
+      title: "Uninstall?",
+      text: [
+        "You crack your knuckles and tap the orb twice. A list of installed spells floats up in front of you.",
+        "There it is, right at the top: <em>Necro-Link 4.0, installed by Glorp, today</em>.",
+        "You hit Uninstall. A little box pops up: <em>Are you sure? 4,816,203 dead people will be disconnected.</em>",
+        "From inside the orb, millions of tiny voices all say, “Wait—”",
+      ],
+      choices: [],
+    },
+
+    clockout: {
+      title: "Clocked Out",
+      ending: true,
+      text: [
+        "You pocket the garage code, pat the orb twice, and say, “I’ll put in a ticket.”",
+        "“You son of a—” the orb starts, but you’re already on the stairs.",
+        "That night, you punch 1234 into the keypad and the garage door rolls open on the first try. Best day of your life.",
+        "Somewhere in a stone tower, an orb is still whispering, “Please... kill me.”",
+      ],
       choices: [],
     },
   },
