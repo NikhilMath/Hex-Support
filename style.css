@@ -82,9 +82,17 @@ body {
   cursor: pointer;
 }
 
+/* Big maps scroll inside their box, which follows where you are. */
 .map-scroll {
-  overflow-x: auto;
+  max-height: 55vh;
+  overflow: auto;
   padding: 0 1rem;
+}
+
+@media (max-width: 600px) {
+  .map-scroll {
+    max-height: 35vh;
+  }
 }
 
 #map-svg {

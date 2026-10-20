@@ -8,6 +8,7 @@
   const choicesEl = document.getElementById("choices");
   const restartBtn = document.getElementById("restart");
   const mapSvg = document.getElementById("map-svg");
+  const mapScroll = mapSvg.parentElement;
   const deadEndCount = document.getElementById("dead-end-count");
   const sceneCount = document.getElementById("scene-count");
   sceneCount.textContent = `Scenes: ${Object.keys(STORY.passages).length} of ${STORY.targetScenes}`;
@@ -77,9 +78,19 @@
     const over = deadEnds > STORY.maxEndings;
     deadEndCount.textContent = `Dead ends: ${deadEnds} of ${STORY.maxEndings}${over ? " (too many)" : ""}`;
     deadEndCount.classList.toggle("over", over);
+    centerMapOn(mapSvg.querySelector(".map-node.current rect"));
 
     window.scrollTo(0, 0);
     titleEl.focus({ preventScroll: true });
+  }
+
+  // Scroll the map box (not the page) so the current scene is in the middle.
+  function centerMapOn(box) {
+    if (!box) return;
+    const node = box.getBoundingClientRect();
+    const view = mapScroll.getBoundingClientRect();
+    mapScroll.scrollTop += node.top - view.top - (view.height - node.height) / 2;
+    mapScroll.scrollLeft += node.left - view.left - (view.width - node.width) / 2;
   }
 
   restartBtn.addEventListener("click", () => {
