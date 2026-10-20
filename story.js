@@ -78,6 +78,7 @@ const STORY = {
         "“Omg, you’re suffering right now. Really bad,” you say. “Can you do me a favor? Find my dad and ask him the garage code. They’re charging 50 bucks to reset it, and I really just blew my money on this weird potion.”",
         "Behind you, Gorb is already trying to call his wife, visibly upset.",
         "Maybe this is just better to not deal with right now. “Hey,” you whisper to the orb, “come find me when you’re done, and I’ll fix you up.”",
+        "“How the fuck am I supposed to find you?” the orb replies. “I’m an orb. Just roll around this place? You know how many stairs we have? I don’t even know how to go up stairs.”",
       ],
       choices: [],
     },
