@@ -47,7 +47,7 @@
     if (choices.length === 0) {
       const end = document.createElement("p");
       end.className = "the-end";
-      end.textContent = "The End";
+      end.textContent = passage.ending ? "The End" : "To be continued…";
       choicesEl.replaceChildren(end);
     } else {
       choicesEl.replaceChildren(...choices.map((c) => choiceLink(c.text, c.to)));

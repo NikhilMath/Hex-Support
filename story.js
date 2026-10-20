@@ -2,58 +2,25 @@
 //
 // Every passage has an id (its key in `passages`), a title, some text
 // (one string per paragraph, HTML like <em> is allowed), and a list of
-// choices. Each choice sends the reader to another passage's id with `to`.
-// A passage with no choices is an ending.
+// choices. Each choice sends the reader to another passage's id with `to`:
 //
-// The passages below are placeholders to show the shape. Replace them.
+//   choices: [
+//     { text: "Smack the orb", to: "smack" },
+//   ],
+//
+// A passage with no choices shows "To be continued…". Add `ending: true`
+// to show "The End" instead.
 
 const STORY = {
   start: "start",
 
   passages: {
     start: {
-      title: "A New Ticket",
+      title: "The Tower",
       text: [
-        "The support queue chimes. One new ticket, marked <em>urgent</em>.",
-        "You crack your knuckles and open it.",
-      ],
-      choices: [
-        { text: "Read the ticket carefully", to: "read" },
-        { text: "Close it without reading", to: "ignore" },
-      ],
-    },
-
-    read: {
-      title: "The Details",
-      text: [
-        "The customer says their problem started at midnight and has been getting worse.",
-      ],
-      choices: [
-        { text: "Call the customer", to: "call" },
-        { text: "Escalate to your manager", to: "escalate" },
-      ],
-    },
-
-    ignore: {
-      title: "Ticket Closed",
-      text: [
-        "The ticket disappears from your queue. Somewhere, someone is very unhappy.",
-      ],
-      choices: [],
-    },
-
-    call: {
-      title: "On the Line",
-      text: [
-        "The phone rings once, twice, and then someone picks up.",
-      ],
-      choices: [],
-    },
-
-    escalate: {
-      title: "Not Your Problem",
-      text: [
-        "Your manager sighs and takes the ticket. You will hear about this later.",
+        "You’re standing in a stone tower at 7 a.m., holding a lukewarm coffee, while a 900-year-old wizard named Gorb jabs a crusty finger at a glowing orb.",
+        "“This piece of shit stopped working the second I updated it,” he snaps. “I have a meeting with my dead wife and her lawyer about our assets for the divorce. God, even in death this bitch ruins my life.”",
+        "The orb flickers. A tiny voice inside it whispers, “Please... kill me.”",
       ],
       choices: [],
     },
