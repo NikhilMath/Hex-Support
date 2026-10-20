@@ -2,7 +2,9 @@
 //   - choices that point at a scene that doesn't exist
 //   - scenes with no choices that aren't marked `ending: true`
 //   - scenes nothing leads to
-//   - loops (a route that can go around forever)
+//   - loops (a route that can go around forever, or come back to a scene
+//     the reader has already read)
+//   - scenes that can't reach any ending
 //   - more endings than STORY.maxEndings
 // Then prints how long a playthrough is and how many routes reach each ending.
 //
@@ -48,9 +50,11 @@ for (const queue = [start]; queue.length; ) {
 }
 for (const id of ids) if (!reached.has(id)) problems.push(`${id}: nothing leads here`);
 
+// Look for loops from every scene, not just the start, so a loop among
+// scenes nothing leads to still gets reported as a loop.
 const state = {};
 let looped = false;
-(function visit(id, trail) {
+const visit = (id, trail) => {
   if (state[id] === "done") return;
   if (state[id] === "open") {
     looped = true;
@@ -60,7 +64,21 @@ let looped = false;
   state[id] = "open";
   for (const c of choicesOf(id)) if (passages[c.to]) visit(c.to, [...trail, id]);
   state[id] = "done";
-})(start, []);
+};
+for (const id of ids) visit(id, []);
+
+// Every scene has to lead to an ending somehow.
+const canEnd = new Set(ids.filter((id) => passages[id].ending));
+for (let grew = true; grew; ) {
+  grew = false;
+  for (const id of ids) {
+    if (!canEnd.has(id) && choicesOf(id).some((c) => canEnd.has(c.to))) {
+      canEnd.add(id);
+      grew = true;
+    }
+  }
+}
+for (const id of ids) if (!canEnd.has(id)) problems.push(`${id}: no route from here reaches an ending`);
 
 const endings = ids.filter((id) => passages[id].ending);
 if (endings.length > STORY.maxEndings) {
@@ -69,6 +87,7 @@ if (endings.length > STORY.maxEndings) {
 
 console.log(`Scenes: ${ids.length} of ${STORY.targetScenes}`);
 console.log(`Endings: ${endings.length} of ${STORY.maxEndings}`);
+console.log(looped ? "Loops: FOUND (see below)" : "Loops: none. No scene can come up twice in one playthrough.");
 
 if (!looped) {
   // For each scene: shortest and longest route to an ending, and how many
