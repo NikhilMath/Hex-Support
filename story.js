@@ -67,6 +67,7 @@ const STORY = {
         "“Let’s start with the assets,” she says. “I want the orb. I was there when it hatched.”",
         "The baby orb flickers, looks right at you, and whispers, “Mama?”",
         "“Actually,” Glorp says, “the retarded IT support turned it off and on again, and now it thinks they’re the mama.”",
+        "“Well,” she says, “you know what that means...”",
       ],
       choices: [],
     },
