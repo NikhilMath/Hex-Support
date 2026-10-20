@@ -33,7 +33,10 @@ const STORY = {
       text: [
         "You set your coffee down, find the little rune on the back of the orb, and hold it for ten seconds.",
         "The glow dies. Gorb gasps like you just drowned a kitten.",
-        "Then the orb blinks back to life, and the tiny voice groans, “Oh no. Not again.”",
+        "When the orb blinks back to life, the voice inside it is now a little baby.",
+        "Gorb gets mad. “I have raised this orb since it was a baby. You’re fucking telling me I gotta go through the puberty stage again?!”",
+        "“Well, hey, can you do Wizcast? I need to do a meeting. Are you smart enough for that?”",
+        "The orb starts broadcasting Wizcast, and a half-decayed woman answers.",
       ],
       choices: [],
     },
