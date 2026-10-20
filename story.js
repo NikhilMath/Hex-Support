@@ -338,11 +338,11 @@ const STORY = {
         "There is a long silence on the call. Marrow’s little hourglass keeps running.",
         "“Well,” Doris says. “See you both in court.” She hangs up.",
         "Plonk is crying. He pulls you into a hug that smells like mead and soup. “Nobody’s ever said that to her,” he whispers. “Not in three hundred years. Not even the plague.”",
-        "He lets go and wipes his nose on his sleeve. “We need a plan. And I need to show you something.”",
+        "He lets go and wipes his nose on his sleeve. “We need a plan.”",
       ],
       choices: [
         { text: "Wing it in court", to: "courthouse" },
-        { text: "Ask what he wants to show you", to: "closet" },
+        { text: "Tell him to go make it right with her", to: "grave" },
       ],
     },
 
@@ -451,7 +451,7 @@ const STORY = {
       ],
       choices: [
         { text: "Give the cape back to Plonk", to: "capereturn" },
-        { text: "Decide the cape is yours now", to: "spell" },
+        { text: "Open the door, hand Plonk the cape, and point at the mirror", to: "tilldeath" },
       ],
     },
 
@@ -498,7 +498,7 @@ const STORY = {
       ],
       choices: [
         { text: "Tell him it’s okay to go", to: "tilldeath" },
-        { text: "Tell him she’s just after the cape", to: "spell" },
+        { text: "Tell him there’s an update for that", to: "v5" },
       ],
     },
 
@@ -789,7 +789,7 @@ const STORY = {
       ],
       choices: [
         { text: "Accept the meeting", to: "joboffer" },
-        { text: "Go down there and talk to the dead in person", to: "inside" },
+        { text: "Take the dead’s demands to the Afterlife Family Court", to: "courthouse" },
       ],
     },
 
@@ -912,7 +912,7 @@ const STORY = {
         "He stands up. His knees crack like a campfire. He raises one crusty finger.",
       ],
       choices: [
-        { text: "Keep bluffing", to: "spell" },
+        { text: "Give up and tell him everything", to: "confess" },
         { text: "Offer him a discount", to: "bribe" },
       ],
     },
@@ -1037,6 +1037,7 @@ const STORY = {
       choices: [
         { text: "Take a number", to: "number" },
         { text: "Cut the line", to: "skip" },
+        { text: "Go looking for Plonk’s dead wife", to: "stall" },
       ],
     },
 
@@ -1100,7 +1101,7 @@ const STORY = {
     stall: {
       title: "Occupied",
       text: [
-        "The bathroom is fluorescent too. One of the stalls is shaking.",
+        "You end up in the bathroom. It’s fluorescent too. One of the stalls is shaking.",
         "There’s ectoplasm on the floor. Ectoplasm on the walls. Ectoplasm on the ceiling. You have no idea how it got on the ceiling.",
         "The stall door bangs open. Out tumble a half-decayed woman and a shirtless ghost with an eight-pack, both mostly naked.",
         "“This isn’t what it looks like,” the woman says. Then she squints at you. “Oh. You’re Plonk’s IT person. I’m Doris. His wife.” She jerks a thumb at the ghost. “This is Gary.”",
@@ -1109,7 +1110,7 @@ const STORY = {
       ],
       choices: [
         { text: "Hear Doris out", to: "dorisconfess" },
-        { text: "Back out slowly and find the front desk", to: "clerk" },
+        { text: "Take what you just saw to the divorce court", to: "courthouse" },
       ],
     },
 
@@ -1123,7 +1124,7 @@ const STORY = {
       ],
       choices: [
         { text: "Go to the bargaining table", to: "bargaining" },
-        { text: "Get out before this gets ugly", to: "exit" },
+        { text: "March the strikers to the Afterlife Family Court", to: "courthouse" },
       ],
     },
 
@@ -1137,7 +1138,7 @@ const STORY = {
         "Everything goes black.",
       ],
       choices: [
-        { text: "Open your eyes", to: "spell" },
+        { text: "Open your eyes", to: "tower" },
         { text: "Keep them closed and stay", to: "aftersupport" },
       ],
     },
@@ -1215,11 +1216,11 @@ const STORY = {
         "“The afterlife wants to hire you?” she says. “Holy shit. Okay. First of all, you never returned your work crystal, so you still technically work for us. Second of all, Hex Support takes thirty percent.”",
         "“Deb, they’re dead.”",
         "“Thirty-five percent.” You hear her put down her sandwich, which has never happened before. “Do you know what this means? Customers who can’t leave a bad review. Can’t ask for a refund. Can’t die on us.”",
-        "She’s quiet for a second. “I’m proud of you, kid.”",
+        "She’s quiet for a second. “I’m proud of you, kid.” Then she’s chewing again. “Also, the dead would pay a fortune for the next update. Necro-Link 5.0 lets them come back out. Just saying.”",
       ],
       choices: [
         { text: "Go to the interview anyway", to: "interview" },
-        { text: "Let Deb make the deal", to: "aftersupport" },
+        { text: "Let Deb sell the dead the 5.0 upgrade", to: "v5" },
       ],
     },
 
@@ -1325,7 +1326,7 @@ const STORY = {
         "The bailiff with no lower jaw starts walking toward you. Across the room, Plonk stands up, and his face is turning a color you have never seen on a living person.",
       ],
       choices: [
-        { text: "Go quietly and serve your sentence", to: "inside" },
+        { text: "Beg the judge for a do-over", to: "mamaruling" },
         { text: "Turn around and face Plonk", to: "spell" },
       ],
     },
@@ -1390,7 +1391,7 @@ const STORY = {
       ],
       choices: [
         { text: "Stay down", to: "mistrial" },
-        { text: "Get up", to: "spell" },
+        { text: "Get up, dust yourself off, and act like nothing happened", to: "mamaruling" },
       ],
     },
 
@@ -1405,7 +1406,7 @@ const STORY = {
       ],
       choices: [
         { text: "Follow Doris", to: "dorisconfess" },
-        { text: "Face Plonk", to: "spell" },
+        { text: "Tell Plonk to go after her", to: "grave" },
       ],
     },
 
@@ -1413,7 +1414,7 @@ const STORY = {
       title: "Full Custody",
       text: [
         "“Full custody to the hex support technician,” the judge says. Femur. Done.",
-        "Plonk screams so loudly a stained-glass window cracks. Doris shrugs and goes back to making out with Gary. Marrow sends you a bill for the custody paperwork, payable in molars.",
+        "Plonk screams so loudly a stained-glass window cracks. Doris shrugs and starts making out with Gary. Marrow, the skeleton lawyer, sends you a bill for the custody paperwork, payable in molars.",
         "The orb rolls up your leg and into your arms. It’s warm.",
         "“Mama,” it says again, happily. Then it pees on you a little, which you didn’t know orbs could do. It’s just light, but still.",
       ],
@@ -1430,12 +1431,14 @@ const STORY = {
         "The orb’s glow goes out like a candle. It doesn’t cry. It just rolls back into its cage by itself, which is worse.",
         "“Custody to the state,” the judge says. “Which is to say, the dead. Which is to say, the wife.” Femur. “The Silverlight cape also goes to the wife. Mr. Plonk will deliver it to her grave by sundown.”",
         "You know about that cape. Everyone does. Whoever wears it can’t die, and it’s the only thing that has kept Plonk alive for nine hundred years.",
+        "The bailiff sets it on the table in front of Plonk. It hums. Across the room, Doris leans forward and watches him very closely.",
         "Plonk goes white. Whiter. He grabs your arm with a hand like a bag of twigs.",
         "“You’re coming with me,” he says.",
       ],
       choices: [
         { text: "Go with him to her grave", to: "grave" },
-        { text: "Tell him it’s not your problem", to: "spell" },
+        { text: "Change your mind and take the orb", to: "award" },
+        { text: "Tell him it’s okay to let go", to: "tilldeath" },
       ],
     },
 
@@ -1451,7 +1454,7 @@ const STORY = {
       ],
       choices: [
         { text: "Take the orb home", to: "firstnight" },
-        { text: "Find it a daycare", to: "daycare" },
+        { text: "Raise it together", to: "orbmom" },
       ],
     },
 
@@ -1482,7 +1485,7 @@ const STORY = {
       ],
       choices: [
         { text: "Pull the orb out and raise it yourself", to: "orbmom" },
-        { text: "Go yell at Plonk", to: "spell" },
+        { text: "Drag drunk Plonk to his wife’s grave to sober up", to: "grave" },
       ],
     },
 
@@ -1492,9 +1495,9 @@ const STORY = {
       title: "Orb Mom",
       ending: true,
       text: [
-        "It takes a while, but you figure it out. The orb likes the hold music. It likes being held up to the window at sunset. It hates Mondays, just like you.",
-        "Its first word after “mama” is “fuck.” You blame Plonk. Plonk blames you. Plonk shows up every Tuesday, invited or not, and brings the orb back smelling like mead.",
-        "Doris never gets the Silverlight cape. Every Christmas, she and Plonk scream at each other about it through the orb, which is honestly the most normal thing about this family.",
+        "It takes a while, but you figure it out. The orb likes the Hex Support hold music. It likes being held up to the window at sunset. It hates Mondays, just like you.",
+        "Its first word after “mama” is “fuck.” You blame Plonk. Plonk blames you. Plonk shows up every Tuesday, and most other days, invited or not, and brings the orb back smelling like mead.",
+        "Doris never gets the Silverlight cape, the magic cape that keeps Plonk alive. Every Christmas, she and Plonk scream at each other about it through the orb, which is honestly the most normal thing about this family.",
         "Then it hits puberty. It glows red for a year. It rolls into the bathroom and won’t come out. It screams, “You’re not even my real mom! You’re IT!” and you cry in the car.",
         "But it grows up. It graduates from Orb Academy, top of its class. It gets a job with a young wizard in the city, a nice one, who never updates anything without asking first.",
         "It calls you every Sunday.",
@@ -1548,11 +1551,11 @@ const STORY = {
       ending: true,
       text: [
         "“It’s okay,” you tell him. “Go.”",
-        "Plonk looks at you. He looks at Doris. Then he drops the Silverlight cape on her grave.",
+        "Plonk looks at you. He looks at Doris. Then he holds the Silverlight cape out at arm’s length, the way you’d hold a dirty diaper, and lets go.",
         "Nine hundred years hit him all at once. His beard goes white, then gray, then gone. “Oh, shit,” he says. “I forgot to feed the—” And then he’s a little pile of dust in a very old suit.",
         "The dust sneezes, and Plonk’s ghost steps out of it, blinking. Doris is waiting. She punches him in the arm. Then she kisses him, and it’s gross, and it’s lovely, and some of her face comes off on his.",
-        "Somewhere behind a headstone, Gary shrugs and goes to visit his mom.",
-        "They renew their vows on the spot. A passing crow officiates. You’re the witness. The vows are mostly insults, and they mean every single one.",
+        "Somewhere, Gary, her shirtless ghost boyfriend, shrugs and goes to visit his mom.",
+        "They renew their vows on the spot. A pigeon that happened to be there officiates. You’re the witness. The vows are mostly insults, and they mean every single one.",
         "A week later, a letter shows up in your mailbox, postmarked <em>THE AFTERLIFE</em>. Together, they’ve left you the tower, all nine hundred of its stairs, the orb, and the Silverlight cape, which neither of them needs anymore. At the bottom, in two kinds of handwriting: <em>Don’t update anything.</em>",
         "You don’t. With nobody left to update it, the orb works perfectly for the first time in its life.",
         "You put on the cape. It hums. You feel like you could live forever, and you realize you will.",
@@ -1567,12 +1570,12 @@ const STORY = {
       ending: true,
       text: [
         "It starts with one ghost. Then it’s all of them.",
-        "By sundown, there are more dead people in town than living ones. Half of them aren’t wearing pants. Nobody minds.",
+        "By morning, there are more dead people in town than living ones. Half of them aren’t wearing pants. Nobody minds.",
         "The cemetery throws an ectoplasm foam party that lasts nine days. A Viking DJs. A ghost in a bowling shirt bowls a perfect game straight through the front window of the bank.",
         "Your dad, six years dead, moves back into his garage. Your mom moves in with him. Her new husband, Steve, moves out and takes the boat.",
         "Doris, Plonk’s dead wife, moves back into the tower, and she brings her shirtless ghost boyfriend, and now Plonk lives with both of them. The divorce is off. It’s hard to divorce someone who lives in your guest room. He tells everyone he hates it. He makes them breakfast every morning.",
         "And Hex Support gets four million new tickets, all with the same subject line: <em>How do I go back?</em>",
-        "You open the first one. Before you can type a word, a little box pops up on the orb.",
+        "You open the first one. Before you can type a word, the orb pops up yet another update.",
         "<em>Necro-Link 6.0 is available! Install now?</em>",
         "You click Remind Me Never. Then you close the ticket queue, grab a beer, and go find your dad. There’s a party going on, and for once, nothing needs fixing.",
       ],
