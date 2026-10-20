@@ -384,7 +384,7 @@ const STORY = {
     hide: {
       title: "Cape Smuggler",
       text: [
-        "Plonk stares at you for a long time. Then he nods. “She can sense it in the tower. She can’t sense it in some idiot’s backpack.”",
+        "Plonk squints at you. Then he nods. “She can sense it in the tower. She can’t sense it in some idiot’s backpack.”",
         "He folds the Silverlight cape like a flag and stuffs it into your bag. It hums against your spine. It feels incredible, like the best hug of your life, or a very confident hand.",
         "“Guard it with your life,” Plonk says. “Or don’t. It’ll keep you alive either way.”",
         "Halfway down the stairs, the cape starts whispering to you. Mostly it says <em>put me on</em>.",
@@ -460,7 +460,7 @@ const STORY = {
       text: [
         "You hand Plonk the cape. He snatches it and hugs it like a lost dog.",
         "Then you tell him what Doris said. All of it. The grave. The forty years. Gary and Thursday.",
-        "Plonk is quiet for a long time. He looks older than you’ve ever seen him, which is saying something.",
+        "Plonk doesn’t say anything. He looks older than you’ve ever seen him, which is saying something.",
         "“Tonight?” he finally asks.",
         "“Tonight.”",
         "He nods. Then he looks at you sideways. “I suppose you want a tip.”",
@@ -938,7 +938,7 @@ const STORY = {
         "“How about ten percent off your next service?” you say.",
         "Plonk lowers his finger an inch. “You fucked with my orb, my marriage, and my morning. Ten percent?”",
         "“Fifteen.”",
-        "He sits back down. He strokes his beard. He makes a noise like an old radiator.",
+        "He sits back down. He strokes his beard. He makes the face of a man doing math he doesn’t like.",
         "“Here’s my offer,” he says. “The divorce hearing is at noon. You get up on that witness stand and help me win. Do that, and I won’t turn you into an orb.”",
       ],
       choices: [
@@ -1146,7 +1146,7 @@ const STORY = {
     dorisconfess: {
       title: "Doris",
       text: [
-        "Doris lights a cigarette, which is impressive, because she doesn’t have lungs.",
+        "Doris lights a cigarette. She doesn’t have lungs, but she isn’t going to let that stop her.",
         "“Gary, my ghost boyfriend? He’s a rebound,” she says. “He thinks Thursday is a color. I don’t even like abs.”",
         "“Then why the divorce?”",
         "“Because it’s the only way to get Plonk’s attention.” Her voice cracks. “Forty years I’ve been dead, and he’s never once visited my grave. He’s got a magic cape that keeps him alive forever, and he’d rather sit up in that tower alone than come be with me.”",
