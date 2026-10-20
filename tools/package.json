@@ -1,0 +1,8 @@
+{
+  "name": "hex-support-tools",
+  "private": true,
+  "description": "Helper scripts for the story. Only export-word.js needs anything installed.",
+  "dependencies": {
+    "docx": "^9.13.0"
+  }
+}
