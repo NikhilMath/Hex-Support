@@ -90,6 +90,20 @@ const STORY = {
         "“Mama!” it squeals. “Mama, wait!”",
         "Far above, a door bangs open, and Plonk bellows, “WHERE IS MY ORB?”",
       ],
+      choices: [
+        { text: "Scoop up the orb and keep running", to: "orbnap" },
+        { text: "Fix it right here on the stairs", to: "uninstall" },
+      ],
+    },
+
+    orbnap: {
+      title: "Orbnapped",
+      text: [
+        "You scoop up the baby orb. It’s warm, and it falls asleep in your arms almost immediately.",
+        "You burst out the front door of the tower and into the morning. Behind you, every window lights up at once.",
+        "Plonk’s voice booms across the whole valley: “THAT IS KIDNAPPING. THAT IS ORB-NAPPING.”",
+        "A crow lands on your shoulder with a tiny scroll tied to its leg. It says: <em>This is counsel for the deceased. We should talk.</em>",
+      ],
       choices: [],
     },
 
