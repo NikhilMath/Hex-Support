@@ -4,13 +4,14 @@
 //
 // Dashed boxes are passages nothing links to, or choices that point at a
 // passage that doesn't exist yet. Dashed lines lead back up the map.
+// Glowing blue boxes are dead ends: passages with no choices.
 
 function drawStoryMap(svg, story, currentId, trail) {
   const NODE_W = 132;
   const NODE_H = 36;
   const GAP_X = 16;
   const GAP_Y = 44;
-  const PAD = 8;
+  const PAD = 14;
   const MAX_LABEL = 18;
 
   const passages = story.passages;
@@ -108,6 +109,18 @@ function drawStoryMap(svg, story, currentId, trail) {
     marker.append(el("path", { d: "M0,0 L10,5 L0,10 z", class: cls }));
     defs.append(marker);
   }
+
+  // Soft blue glow around dead ends. The color comes from CSS (.map-glow-color).
+  const glow = el("filter", { id: "map-glow", x: "-25%", y: "-80%", width: "150%", height: "260%" });
+  glow.append(
+    el("feGaussianBlur", { in: "SourceAlpha", stdDeviation: 4, result: "blur" }),
+    el("feFlood", { class: "map-glow-color", result: "color" }),
+    el("feComposite", { in: "color", in2: "blur", operator: "in", result: "glow" }),
+  );
+  const merge = el("feMerge");
+  merge.append(el("feMergeNode", { in: "glow" }), el("feMergeNode", { in: "glow" }), el("feMergeNode", { in: "SourceGraphic" }));
+  glow.append(merge);
+  defs.append(glow);
   svg.append(defs);
 
   for (const id of order) {
@@ -145,6 +158,8 @@ function drawStoryMap(svg, story, currentId, trail) {
     if (!passage) classes.push("missing");
     else if (unreachable.includes(id)) classes.push("unreachable");
     if (passage && passage.ending) classes.push("ending");
+    const deadEnd = passage && choicesOf(id).length === 0;
+    if (deadEnd) classes.push("dead-end");
     if (trail.visited.has(id)) classes.push("visited");
     if (id === currentId) classes.push("current");
 
@@ -157,9 +172,13 @@ function drawStoryMap(svg, story, currentId, trail) {
       "text-anchor": "middle", "dominant-baseline": "central",
     });
     text.textContent = label.length > MAX_LABEL ? label.slice(0, MAX_LABEL - 1) + "…" : label;
-    link.append(tip, el("rect", { x, y, width: NODE_W, height: NODE_H, rx: 6 }), text);
+    const box = el("rect", { x, y, width: NODE_W, height: NODE_H, rx: 6 });
+    if (deadEnd) box.setAttribute("filter", "url(#map-glow)");
+    link.append(tip, box, text);
     svg.append(link);
   }
+
+  return { deadEnds: Object.keys(passages).filter((id) => choicesOf(id).length === 0).length };
 
   function el(tag, attrs = {}) {
     const node = document.createElementNS("http://www.w3.org/2000/svg", tag);

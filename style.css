@@ -7,6 +7,8 @@
   --accent-text: #ffffff;
   --border: #e2ddd3;
   --border-strong: #c4bcae;
+  --glow: #2b7de9;
+  --warn: #c2410c;
   --font-body: Georgia, "Times New Roman", serif;
   --font-ui: system-ui, -apple-system, "Segoe UI", sans-serif;
 }
@@ -21,6 +23,8 @@
     --accent-text: #16141a;
     --border: #34303d;
     --border-strong: #645c74;
+    --glow: #5eb0ff;
+    --warn: #fb923c;
   }
 }
 
@@ -124,6 +128,16 @@ body {
   font-style: italic;
 }
 
+.map-node.dead-end rect {
+  stroke: var(--glow);
+  stroke-width: 1.5;
+}
+
+.map-glow-color {
+  flood-color: var(--glow);
+  flood-opacity: 0.55;
+}
+
 .map-node:hover rect,
 .map-node:focus-visible rect {
   stroke: var(--accent);
@@ -185,6 +199,16 @@ body {
 
 .key-visited {
   border-color: var(--accent);
+}
+
+.key-dead-end {
+  border-color: var(--glow);
+  box-shadow: 0 0 5px var(--glow);
+}
+
+#dead-end-count.over {
+  color: var(--warn);
+  font-weight: 600;
 }
 
 #passage-title {

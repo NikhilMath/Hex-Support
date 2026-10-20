@@ -8,6 +8,7 @@
   const choicesEl = document.getElementById("choices");
   const restartBtn = document.getElementById("restart");
   const mapSvg = document.getElementById("map-svg");
+  const deadEndCount = document.getElementById("dead-end-count");
 
   // What the reader has seen this visit, for the map.
   const trail = { visited: new Set(), walked: new Set() };
@@ -70,7 +71,10 @@
     lastId = id;
 
     showPassage(id, passage);
-    drawStoryMap(mapSvg, STORY, id, trail);
+    const { deadEnds } = drawStoryMap(mapSvg, STORY, id, trail);
+    const over = deadEnds > STORY.maxEndings;
+    deadEndCount.textContent = `Dead ends: ${deadEnds} of ${STORY.maxEndings}${over ? " (too many)" : ""}`;
+    deadEndCount.classList.toggle("over", over);
 
     window.scrollTo(0, 0);
     titleEl.focus({ preventScroll: true });

@@ -9,10 +9,12 @@
 //   ],
 //
 // A passage with no choices shows "To be continued…". Add `ending: true`
-// to show "The End" instead.
+// to show "The End" instead. Either way it's a dead end, and glows blue on
+// the map. `maxEndings` is how many dead ends the story is allowed.
 
 const STORY = {
   start: "start",
+  maxEndings: 5,
 
   passages: {
     start: {
