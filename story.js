@@ -100,7 +100,7 @@ const STORY = {
       title: "Orbnapped",
       text: [
         "You scoop up the baby orb. It’s warm, and it falls asleep in your arms almost immediately.",
-        "You burst out the front door of the tower and into the morning. Behind you, every window lights up at once.",
+        "You burst out the front door of the tower and into the morning air. Behind you, every window lights up at once.",
         "Plonk’s voice booms across the whole valley: “THAT IS KIDNAPPING. THAT IS ORB-NAPPING.”",
         "A crow lands on your shoulder with a tiny scroll tied to its leg. It says: <em>This is counsel for the deceased. We should talk.</em>",
       ],
