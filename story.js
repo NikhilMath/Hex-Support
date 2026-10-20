@@ -53,6 +53,7 @@ const STORY = {
         "On the other side of the call, a little more of her face rots off.",
         "A skeleton in a tie leans into the frame. “Counsel for the deceased,” he says. “We’ll be adding that to the filing.”",
         "Gorb turns to look at you very, very slowly.",
+        "“I swear to god, if she takes the Silverlight cape because of that, I will find you and turn you into my next orb. Get the fuck out of my sanctum.”",
       ],
       choices: [],
     },
