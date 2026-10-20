@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hex Support</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <header class="site-header">
+      <p class="site-title">Hex Support</p>
+    </header>
+
+    <article id="passage" aria-live="polite">
+      <h1 id="passage-title" tabindex="-1"></h1>
+      <div id="passage-text"></div>
+    </article>
+
+    <nav id="choices" aria-label="Choices"></nav>
+
+    <footer class="site-footer">
+      <button id="restart" type="button">Start over</button>
+    </footer>
+  </main>
+
+  <noscript>
+    <p class="noscript">This story needs JavaScript turned on to play.</p>
+  </noscript>
+
+  <script src="story.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
