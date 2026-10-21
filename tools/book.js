@@ -103,7 +103,8 @@ section { break-before: page; }
 .scene p { margin-bottom: var(--pm); }
 .number { margin: 0; text-align: center; font: bold var(--num)/1 Georgia, serif; letter-spacing: -0.01em; }
 .title { margin: 0.12in 0 var(--head); padding-top: 0.12in; border-top: 0.75pt solid #111; text-align: center; font: italic 13pt/1.25 Georgia, serif; break-after: avoid; }
-.choices { margin-top: 1.1em; break-inside: avoid; }
+/* Inset a little: Chrome clips anything that touches the edge of the text area, which ate the boxes' right border. */
+.choices { margin: 1.1em 1.5pt 0; break-inside: avoid; }
 .scene p.choice { display: flex; justify-content: space-between; align-items: baseline; gap: 1em; margin: 0 0 0.42em; padding: 0.45em 0.75em; border: 0.75pt solid #555; border-radius: 6px; line-height: 1.3; }
 .choice .label { font-weight: bold; }
 .choice .turn { white-space: nowrap; font: bold 7.5pt Arial, Helvetica, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; }
