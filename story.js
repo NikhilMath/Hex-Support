@@ -31,8 +31,9 @@ const STORY = {
   passages: {
     start: {
       title: "The Tower",
+      revised: 1,
       text: [
-        "You’re standing in a stone tower at 7 a.m., holding a lukewarm coffee, while a 900-year-old wizard named Plonk the Blank jabs a crusty finger at a glowing orb.",
+        "You’re standing in a stone tower at 7 a.m., holding a lukewarm coffee, while a 900-year-old wizard named Plonk the Wizard jabs a crusty finger at a glowing orb.",
         "“This piece of shit stopped working the second I updated it,” he snaps. “I have a meeting at 8 with my dead wife and her lawyer about our assets for the divorce. God, even in death this bitch ruins my life.”",
         "The orb flickers. A tiny voice inside it whispers, “Please... kill me.”",
       ],
@@ -1530,12 +1531,13 @@ const STORY = {
 
     aftersupport: {
       title: "Afterlife Support",
+      revised: 1,
       ending: true,
       text: [
         "And that’s how you end up working for the dead.",
         "Anyone else would call it a punishment. It’s the best thing that has ever happened to you.",
         "You get a desk in a crypt with a view of the river Styx, a headset, a mug that says <em>WORLD’S OKAYEST TECHNICIAN</em>, and 4,816,203 open tickets. Every single customer is furious.",
-        "<em>Ticket #1: My widow married a man named Steve. Haunt his toaster. NOW.</em><br><em>Ticket #2: WHAT IS A WI-FI. —A peasant, 1347</em><br><em>Ticket #3: Gary? GARY?</em><br><em>Ticket #4: My husband STILL hasn’t visited my grave. —Doris, Plonk’s wife</em><br><em>Ticket #5: This piece of shit stopped working the second I updated it. —Plonk the Blank (still alive, paying extra)</em>",
+        "<em>Ticket #1: My widow married a man named Steve. Haunt his toaster. NOW.</em><br><em>Ticket #2: WHAT IS A WI-FI. —A peasant, 1347</em><br><em>Ticket #3: Gary? GARY?</em><br><em>Ticket #4: My husband STILL hasn’t visited my grave. —Doris, Plonk’s wife</em><br><em>Ticket #5: This piece of shit stopped working the second I updated it. —Plonk the Wizard (still alive, paying extra)</em>",
         "Here’s the beautiful thing about angry dead people: they can’t touch you. A Viking screams at you for forty minutes about his longboat, then throws his chair at you, and it goes right through you. Nothing sticks.",
         "When someone demands to speak to your manager, you transfer them two desks down to your dad, six years dead, mustache intact. “Sir,” he says, “I was a union man for thirty years. You do not want this fight.” They always back down.",
         "Every morning, he brings you a coffee. It’s lukewarm. It’s perfect.",
