@@ -7,7 +7,8 @@
 // The icons are drawn from favicon.svg. The preview reuses the art from
 // book/front-cover.svg (minus its title and author) on the same night sky,
 // so rerun this after changing either (needs node, and Google Chrome or
-// Microsoft Edge):
+// Microsoft Edge), then bump the ?v= on the icon links in index.html so
+// browsers fetch the new ones:
 //   node tools/site-images.js
 
 const fs = require("fs");
