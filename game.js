@@ -11,6 +11,7 @@
   const forgetBtn = document.getElementById("forget");
   const mapSvg = document.getElementById("map-svg");
   const mapScroll = mapSvg.parentElement;
+  const mapBox = mapScroll.parentElement;
   const deadEndCount = document.getElementById("dead-end-count");
   const sceneCount = document.getElementById("scene-count");
   const endingsFound = document.getElementById("endings-found");
@@ -119,7 +120,7 @@
   }
 
   // `jump` scrolls the page so the new scene's title is at the top. It's off
-  // for the first page load, so the map is the first thing you see.
+  // for the first page load, so the page opens at the very top.
   function render(jump) {
     const id = currentId();
     const passage = STORY.passages[id];
@@ -150,6 +151,7 @@
   }
 
   // Scroll the map box (not the page) so the current scene is in the middle.
+  // A closed map has no size, so this only works once it's open.
   function centerMapOn(box) {
     if (!box) return;
     const node = box.getBoundingClientRect();
@@ -173,6 +175,10 @@
     trail.walked.clear();
     trail.revs = {};
     goToStart();
+  });
+
+  mapBox.addEventListener("toggle", () => {
+    if (mapBox.open) centerMapOn(mapSvg.querySelector(".map-node.current rect"));
   });
 
   window.addEventListener("hashchange", () => render(true));

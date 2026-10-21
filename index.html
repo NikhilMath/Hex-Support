@@ -12,7 +12,14 @@
       <p class="site-title">Hex Support</p>
     </header>
 
-    <details class="story-map" open>
+    <article id="passage" aria-live="polite">
+      <h1 id="passage-title" tabindex="-1"></h1>
+      <div id="passage-text"></div>
+    </article>
+
+    <nav id="choices" aria-label="Choices"></nav>
+
+    <details class="story-map">
       <summary>Story map</summary>
       <div class="map-scroll">
         <svg id="map-svg" aria-label="Story map"></svg>
@@ -27,17 +34,11 @@
       </p>
     </details>
 
-    <article id="passage" aria-live="polite">
-      <h1 id="passage-title" tabindex="-1"></h1>
-      <div id="passage-text"></div>
-    </article>
-
-    <nav id="choices" aria-label="Choices"></nav>
-
     <footer class="site-footer">
       <button id="restart" type="button">Start over</button>
       <button id="forget" type="button" class="quiet">Forget where I’ve been</button>
       <p class="footer-note">Your map remembers every scene you’ve read, in this browser only. Start over keeps it.</p>
+      <p class="footer-credit">Made by <a href="https://nikhilmath.com">NikhilMath.com</a></p>
     </footer>
   </main>
 

@@ -61,17 +61,24 @@ body {
   color: var(--muted);
 }
 
-/* The map can spread wider than the reading column on big screens. */
+/* Open, the map can spread wider than the reading column on big screens. */
 .story-map {
   position: relative;
   left: 50%;
   width: min(64rem, calc(100vw - 2rem));
   transform: translateX(-50%);
-  margin-bottom: 2rem;
+  margin-top: 3rem;
   border: 1px solid var(--border);
   border-radius: 0.5rem;
   background: var(--surface);
   font-family: var(--font-ui);
+}
+
+/* Closed, it lines up with the choices above it. */
+.story-map:not([open]) {
+  left: 0;
+  width: 100%;
+  transform: none;
 }
 
 .story-map summary {
@@ -348,6 +355,24 @@ body {
   font-family: var(--font-ui);
   font-size: 0.8125rem;
   color: var(--muted);
+}
+
+.footer-credit {
+  flex-basis: 100%;
+  margin: 0.75rem 0 0;
+  font-family: var(--font-ui);
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.footer-credit a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer-credit a:hover,
+.footer-credit a:focus-visible {
+  text-decoration: underline;
 }
 
 .legend-found {
