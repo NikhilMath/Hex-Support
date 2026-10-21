@@ -1198,7 +1198,7 @@ const STORY = {
         "“Where do you see yourself in five thousand years?”",
         "“Alive?”",
         "“Ambitious.” He writes something down. “What’s your greatest weakness?”",
-        "“I care too much,” you say. “About lunch.”",
+        "“I care too much,” you say.",
         "“And why do you want to work for the dead?”",
         "You think about it. No customers yelling. No dispatch. No stairs. “Honestly? The commute.”",
         "Doug smiles. His teeth are perfect, because he has thousands to choose from.",
