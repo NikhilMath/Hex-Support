@@ -59,9 +59,10 @@ const STORY = {
 
     mute: {
       title: "The Mute Rune",
+      revised: 1,
       text: [
         "You lunge for the orb and tap what you’re pretty sure is the mute rune.",
-        "It is not the mute rune. The baby orb doesn’t know what mute is. It only knows the last thing it heard, and it says it in Plonk’s voice:",
+        "It is not the mute rune. The baby orb doesn’t know what mute is. It only remembers one thing from before the reboot, and it says it in Plonk’s voice:",
         "“Even in death this bitch ruins my life.”",
         "On the other side of the call, a little more of her face rots off.",
         "A skeleton in a tie leans into the frame. “Counsel for the deceased,” he says. “We’ll be adding that to the filing.”",
@@ -324,10 +325,11 @@ const STORY = {
 
     teamdoris: {
       title: "Team Doris",
+      revised: 1,
       text: [
         "“Deal,” you say.",
         "“Smart cookie,” Doris says. Marrow writes something down with a finger bone.",
-        "Plonk doesn’t yell. That’s the scary part. He just sets down his mead, cracks his neck, which sounds like a tree falling over, and raises one crusty finger at you.",
+        "Plonk doesn’t yell. That’s the scary part. He just finishes his mead, cracks his neck, which sounds like a tree falling over, and raises one crusty finger at you.",
         "“Run, sweetie,” Doris says.",
       ],
       choices: [
@@ -452,13 +454,13 @@ const STORY = {
 
     dorismirror: {
       title: "Mirror, Mirror",
-      revised: 1,
+      revised: 2,
       text: [
         "The bathroom mirror fogs over, and a half-rotted face appears in the glass. It’s Doris, Plonk’s dead wife, and she does not look happy to be in a bathroom.",
         "“Listen, sweetie. I don’t want to come back to life,” she says. “Life was ninety percent stairs.”",
         "“Then why do you want the cape?”",
         "“Because if he finally takes it off, he comes here. To me.” Her voice cracks. “Gary, my ghost boyfriend? He’s a rebound. Gary thinks Thursday is a color. I just want my husband. Forty years I’ve been dead, and he’s never once visited my grave.”",
-        "“Bring him to my grave tonight,” she says. “With the cape.”",
+        "“Bring him to my grave tonight,” she says. “Cape and all.”",
         "Outside the bathroom door, you hear the slap of Plonk’s slippers, getting closer.",
       ],
       choices: [
@@ -1272,10 +1274,11 @@ const STORY = {
 
     courthouse: {
       title: "Court of the Dead",
+      revised: 1,
       text: [
         "At noon, the Afterlife Family Court is in session. It’s a mausoleum with a parking lot.",
         "You walk through a bone detector. A bailiff with no lower jaw checks your name off a list: you’re the expert witness, as the last hex support technician to touch the orb.",
-        "The orb is already here, sitting in a little velvet cage on the evidence table and glowing nervously.",
+        "The bailiff has the orb in a little velvet cage on the evidence table. It’s glowing nervously.",
         "Plonk sits at one table in a suit older than most countries. Doris, his dead wife, sits at the other, half-decayed, holding hands with her ghost boyfriend, Gary, who is shirtless and has an eight-pack. Between them, a skeleton lawyer in a tie shuffles his papers.",
         "The judge is a lich who died of boredom in 1612 and has been bored ever since. He bangs a gavel made out of a femur.",
         "“Let’s get this over with,” he says.",
@@ -1347,8 +1350,9 @@ const STORY = {
 
     garydeal: {
       title: "Gary’s Deal",
+      revised: 1,
       text: [
-        "“Here’s the thing,” Gary says. “That cape keeps whoever wears it alive. So if Doris gets the cape, she comes back to life. And then we can finally be together. Like, really together.” He winks. “Bone. Actual bone. Ghost bone isn’t the same, bro.”",
+        "“Here’s the thing,” Gary says. “That cape keeps whoever wears it alive. So if Doris gets the cape, she comes back to life. I hang on to the corner, I come back too. And then we can finally be together. Like, really together.” He winks. “Bone. Actual bone. Ghost bone isn’t the same, bro.”",
         "“What do I get?”",
         "“My party barge. Slightly haunted. By me.” He flexes. “Just get up there and tell the judge Plonk’s a terrible orb dad. Lie a little. Everybody lies in court.”",
         "He holds out his fist for a fist bump. His fist goes right through yours.",
@@ -1440,12 +1444,13 @@ const STORY = {
 
     declinecustody: {
       title: "Not My Orb",
+      revised: 1,
       text: [
         "“I can’t,” you say. “I work in hex support. I can barely keep a cactus alive.”",
         "The orb’s glow goes out like a candle. It doesn’t cry. It just rolls back into its cage by itself, which is worse.",
         "“Custody to the state,” the judge says. “Which is to say, the dead. Which is to say, the wife.” Femur. “The Silverlight cape also goes to the wife. Mr. Plonk will deliver it to her grave by sundown.”",
         "You know about that cape. Everyone does. Whoever wears it can’t die, and it’s the only thing that has kept Plonk alive for nine hundred years.",
-        "The bailiff sets it on the table in front of Plonk. It hums. Across the room, Doris leans forward and watches him very closely.",
+        "The bailiff sets a pair of bolt cutters on the table in front of Plonk. Under his beard, the cape hums. Across the room, Doris leans forward and watches him very closely.",
         "Plonk goes white. Whiter. He grabs your arm with a hand like a bag of twigs.",
         "“You’re coming with me,” he says.",
       ],
