@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- The orb from book/front-cover.svg, spinner and all, on its brass
+       stand. tools/site-images.js turns it into favicon.ico and
+       apple-touch-icon.png. -->
+  <defs>
+    <radialGradient id="orb" cx="0.42" cy="0.36" r="0.68">
+      <stop offset="0" stop-color="#f2fbff"/>
+      <stop offset="0.22" stop-color="#9fdcff"/>
+      <stop offset="0.55" stop-color="#5a86ee"/>
+      <stop offset="0.85" stop-color="#3f2c9c"/>
+      <stop offset="1" stop-color="#24195e"/>
+    </radialGradient>
+    <linearGradient id="brass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7a5a1e"/>
+      <stop offset="0.35" stop-color="#e2bd62"/>
+      <stop offset="0.6" stop-color="#b58b34"/>
+      <stop offset="1" stop-color="#5e4416"/>
+    </linearGradient>
+  </defs>
+
+  <!-- The stand: ring, stem and base -->
+  <ellipse cx="32" cy="50" rx="13" ry="3" fill="#5e4416"/>
+  <path d="M19,50 A13,3 0 0 0 45,50 L45,52.5 A13,3 0 0 1 19,52.5 Z" fill="url(#brass)"/>
+  <path d="M27,55 L37,55 L35,58 L29,58 Z" fill="url(#brass)"/>
+  <path d="M18,60.5 C18,58.5 23,57.5 32,57.5 C41,57.5 46,58.5 46,60.5 L46,61.5 C46,63 41,63.6 32,63.6 C23,63.6 18,63 18,61.5 Z" fill="url(#brass)"/>
+
+  <!-- The orb -->
+  <circle cx="32" cy="27" r="25" fill="url(#orb)"/>
+  <ellipse cx="22.5" cy="16" rx="9" ry="4.8" transform="rotate(-32 22.5 16)" fill="#ffffff" fill-opacity="0.42"/>
+
+  <!-- Loading spinner, stuck forever -->
+  <g transform="translate(32 28)" fill="#ffffff">
+    <rect x="-2.1" y="-12" width="4.2" height="6.6" rx="2.1" opacity="1"/>
+    <rect x="-2.1" y="-12" width="4.2" height="6.6" rx="2.1" opacity="0.88" transform="rotate(45)"/>
+    <rect x="-2.1" y="-12" width="4.2" height="6.6" rx="2.1" opacity="0.76" transform="rotate(90)"/>
+    <rect x="-2.1" y="-12" width="4.2" height="6.6" rx="2.1" opacity="0.64" transform="rotate(135)"/>
+    <rect x="-2.1" y="-12" width="4.2" height="6.6" rx="2.1" opacity="0.52" transform="rotate(180)"/>
+    <rect x="-2.1" y="-12" width="4.2" height="6.6" rx="2.1" opacity="0.4" transform="rotate(225)"/>
+    <rect x="-2.1" y="-12" width="4.2" height="6.6" rx="2.1" opacity="0.3" transform="rotate(270)"/>
+    <rect x="-2.1" y="-12" width="4.2" height="6.6" rx="2.1" opacity="0.2" transform="rotate(315)"/>
+  </g>
+</svg>
