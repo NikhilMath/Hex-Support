@@ -52,11 +52,22 @@
     return p;
   }
 
-  function choiceLink(text, to) {
+  // A choice whose scene you've already read gets a check and a "Visited"
+  // tag, so you can see at a glance which options are left to try.
+  function choiceLink(text, to, seen) {
     const a = document.createElement("a");
-    a.className = "choice";
+    a.className = seen ? "choice visited" : "choice";
     a.href = "#" + encodeURIComponent(to);
-    a.textContent = text;
+    const label = document.createElement("span");
+    label.className = "choice-text";
+    label.textContent = text;
+    a.append(label);
+    if (seen) {
+      const tag = document.createElement("span");
+      tag.className = "choice-tag";
+      tag.textContent = "Visited";
+      a.append(tag);
+    }
     return a;
   }
 
@@ -81,7 +92,7 @@
       end.textContent = passage.ending ? "The End" : "To be continued…";
       choicesEl.replaceChildren(end);
     } else {
-      choicesEl.replaceChildren(...choices.map((c) => choiceLink(c.text, c.to)));
+      choicesEl.replaceChildren(...choices.map((c) => choiceLink(c.text, c.to, trail.visited.has(c.to))));
     }
 
     document.title = passage.title ? `${passage.title} · Hex Support` : "Hex Support";
