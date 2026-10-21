@@ -19,6 +19,8 @@
 
   // Every scene the reader has seen and every choice they've taken, kept in
   // this browser between visits so the map remembers where they've been.
+  // `revs` remembers which version of a `revised` scene they read, so a
+  // rewritten scene shows up as unread again.
   const SAVE_KEY = "hex-support-trail";
   const trail = loadTrail();
   let lastId = null;
@@ -26,16 +28,34 @@
   function loadTrail() {
     try {
       const saved = JSON.parse(localStorage.getItem(SAVE_KEY));
-      if (saved) return { visited: new Set(saved.visited), walked: new Set(saved.walked) };
+      if (saved) {
+        const trail = { visited: new Set(saved.visited), walked: new Set(saved.walked), revs: saved.revs || {} };
+        forgetRewrites(trail);
+        return trail;
+      }
     } catch (e) {
       // Storage blocked or unreadable: start fresh.
     }
-    return { visited: new Set(), walked: new Set() };
+    return { visited: new Set(), walked: new Set(), revs: {} };
+  }
+
+  // Unmark scenes that were rewritten since the reader saw them, along with
+  // the choices taken into and out of them.
+  function forgetRewrites(trail) {
+    for (const id of [...trail.visited]) {
+      const passage = STORY.passages[id];
+      if (!passage || (passage.revised || 0) <= (trail.revs[id] || 0)) continue;
+      trail.visited.delete(id);
+      for (const step of [...trail.walked]) {
+        const [from, to] = step.split("→");
+        if (from === id || to === id) trail.walked.delete(step);
+      }
+    }
   }
 
   function saveTrail() {
     try {
-      localStorage.setItem(SAVE_KEY, JSON.stringify({ visited: [...trail.visited], walked: [...trail.walked] }));
+      localStorage.setItem(SAVE_KEY, JSON.stringify({ visited: [...trail.visited], walked: [...trail.walked], revs: trail.revs }));
     } catch (e) {
       // Private windows and some browsers don't allow storage. The map still
       // works for this visit.
@@ -108,7 +128,10 @@
     if (last && (last.choices || []).some((c) => c.to === id)) {
       trail.walked.add(`${lastId}→${id}`);
     }
-    if (passage) trail.visited.add(id);
+    if (passage) {
+      trail.visited.add(id);
+      if (passage.revised) trail.revs[id] = passage.revised;
+    }
     lastId = id;
     saveTrail();
 
@@ -148,6 +171,7 @@
     if (!confirm("Forget every scene and ending you’ve found? This can’t be undone.")) return;
     trail.visited.clear();
     trail.walked.clear();
+    trail.revs = {};
     goToStart();
   });
 

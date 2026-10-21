@@ -8,6 +8,10 @@
 //     { text: "Smack the orb", to: "smack" },
 //   ],
 //
+// After rewriting a passage, add `revised: 1` (or bump the number on a
+// later rewrite). Anyone who read the old version sees it as unread again,
+// on the map and in the choices.
+//
 // A passage with no choices shows "To be continued…". Add `ending: true`
 // to show "The End" instead. Either way it's a dead end, and glows blue on
 // the map. `maxEndings` is how many dead ends the story is allowed.
@@ -270,6 +274,7 @@ const STORY = {
 
     capetalk: {
       title: "Silverlight Cape",
+      revised: 1,
       text: [
         "Plonk pours himself a mead. It’s 7:40 a.m.",
         "“The Silverlight cape,” he says, and pats the silver cape on his shoulders. “It’s the only reason I’m nine hundred years old instead of a little pile of dust. Whoever wears it can’t die.”",
@@ -368,6 +373,7 @@ const STORY = {
 
     closet: {
       title: "Fourteen Locks",
+      revised: 1,
       text: [
         "Plonk lifts his beard. Under it, the Silverlight cape is fastened at his throat with fourteen padlocks. Lock nine is just a very old padlock with a note that says <em>NO, DORIS</em>.",
         "The cape is silver, it hums, and it smells like nine hundred years of Plonk.",
@@ -383,6 +389,7 @@ const STORY = {
 
     hide: {
       title: "Cape Smuggler",
+      revised: 1,
       text: [
         "Plonk squints at you. Then he nods. “She can feel it in the tower. She can’t feel it in some idiot’s apartment.”",
         "The cape can’t come off, so Plonk is coming too. You put a hoodie over the whole thing and a baseball cap over his beard. He looks like a very old man about to rob a pharmacy.",
@@ -397,6 +404,7 @@ const STORY = {
 
     tryon: {
       title: "Hands Off",
+      revised: 1,
       text: [
         "You grab the bottom of the cape.",
         "Every hair on your body stands up, including some you didn’t know you had. Your back stops hurting. Your knee stops clicking. You can suddenly see without squinting.",
@@ -412,6 +420,7 @@ const STORY = {
 
     capehome: {
       title: "Your Apartment",
+      revised: 1,
       text: [
         "Your apartment is a studio above a potion shop. It smells like burnt sage and someone else’s regret.",
         "Your cat, Firmware, takes one look at Plonk and pisses on the rug.",
@@ -427,6 +436,7 @@ const STORY = {
 
     capesprint: {
       title: "Cape Run",
+      revised: 1,
       text: [
         "You run. You don’t let go, so Plonk comes too.",
         "You take the stairs four at a time, then eight, with a nine-hundred-year-old wizard flapping behind you like a kite. Then you think, <em>fuck it, we can’t die</em>, and jump out the nearest window.",
@@ -442,6 +452,7 @@ const STORY = {
 
     dorismirror: {
       title: "Mirror, Mirror",
+      revised: 1,
       text: [
         "The bathroom mirror fogs over, and a half-rotted face appears in the glass. It’s Doris, Plonk’s dead wife, and she does not look happy to be in a bathroom.",
         "“Listen, sweetie. I don’t want to come back to life,” she says. “Life was ninety percent stairs.”",
@@ -458,6 +469,7 @@ const STORY = {
 
     capereturn: {
       title: "Tonight",
+      revised: 1,
       text: [
         "You open the door and tell Plonk what Doris said. All of it. The grave. The forty years. Gary and Thursday.",
         "Plonk doesn’t say anything. He fiddles with lock nine, the one that says <em>NO, DORIS</em>. He looks older than you’ve ever seen him, which is saying something.",
@@ -473,6 +485,7 @@ const STORY = {
 
     keepcape: {
       title: "Immortal",
+      revised: 1,
       text: [
         "You squeeze under the cape next to Plonk and immediately become the most powerful idiot alive. Plonk hates it. He can’t exactly leave.",
         "You eat gas station sushi. Nothing. You microwave a fork. Nothing. You text your ex “u up,” and when they say no, you feel nothing. You are a god, with a nine-hundred-year-old man breathing on your neck.",
@@ -487,6 +500,7 @@ const STORY = {
 
     grave: {
       title: "Doris’s Grave",
+      revised: 1,
       text: [
         "By sundown, you and Plonk are standing in the cemetery, in front of a crooked headstone: <em>DORIS. BELOVED WIFE. STILL MAD.</em>",
         "He’s holding a bunch of dead flowers. “They’re for a dead woman,” he mutters. “It’s fine.” The Silverlight cape hangs off his shoulders, humming.",
@@ -918,6 +932,7 @@ const STORY = {
 
     drinkwith: {
       title: "Mead O’Clock",
+      revised: 1,
       text: [
         "One more drink becomes nine more drinks. Plonk’s mead is nine hundred years old and tastes like honey, fire, and a horse.",
         "He teaches you a drinking song about Doris. Every verse rhymes with “bitch.” There are forty verses.",
@@ -1547,6 +1562,7 @@ const STORY = {
 
     tilldeath: {
       title: "Till Death",
+      revised: 1,
       ending: true,
       text: [
         "“It’s okay,” you tell him. “Go.”",
