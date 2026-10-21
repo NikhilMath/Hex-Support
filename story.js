@@ -731,7 +731,7 @@ const STORY = {
     ghostbust: {
       title: "Ghost Wrangling",
       text: [
-        "You try to put the dead back. You use a shop vac.",
+        "You try to put the dead back. You use an undead shop vac.",
         "You suck up a nun, a cowboy, and a guy named Phil before the shop vac starts making a noise like it’s having an orgasm and explodes.",
         "Everyone you sucked up is fine. They’re actually a little into it. Phil asks if you can do it again.",
         "Your work crystal, the glowing rock Hex Support makes you carry, starts buzzing. The number has an area code that’s just a skull.",
