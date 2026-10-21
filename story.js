@@ -8,9 +8,10 @@
 //     { text: "Smack the orb", to: "smack" },
 //   ],
 //
-// After rewriting a passage, add `revised: 1` (or bump the number on a
-// later rewrite). Anyone who read the old version sees it as unread again,
-// on the map and in the choices.
+// A passage with `revised: N` shows as unread again to anyone who read an
+// older version, on the map and in the choices. You don't have to add it by
+// hand: `node tools/mark-revised.js` bumps it on every passage that changed
+// since the last commit, and the pre-commit hook in tools/ runs it for you.
 //
 // A passage with no choices shows "To be continued…". Add `ending: true`
 // to show "The End" instead. Either way it's a dead end, and glows blue on

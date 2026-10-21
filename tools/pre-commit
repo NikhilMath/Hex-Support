@@ -1,0 +1,10 @@
+#!/bin/sh
+# Before each commit that touches story.js, mark the scenes that changed as
+# unread again (tools/mark-revised.js) and include that in the commit.
+#
+# Install with:  ln -s ../../tools/pre-commit .git/hooks/pre-commit
+
+git diff --cached --quiet -- story.js && exit 0
+
+node tools/mark-revised.js || exit 1
+git add story.js
