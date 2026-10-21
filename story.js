@@ -272,15 +272,15 @@ const STORY = {
       title: "Silverlight Cape",
       text: [
         "Plonk pours himself a mead. It’s 7:40 a.m.",
-        "“The Silverlight cape,” he says, “is the only reason I’m nine hundred years old instead of a little pile of dust. Whoever wears it can’t die.”",
+        "“The Silverlight cape,” he says, and pats the silver cape on his shoulders. “It’s the only reason I’m nine hundred years old instead of a little pile of dust. Whoever wears it can’t die.”",
         "“And if a dead person puts it on?” you ask.",
         "“They come back.” He drains the mead. “She doesn’t want it so she can live, kid. She wants to come back to life and bang Gary.”",
-        "On the call, Doris rolls her one good eye. “Tell them about the time you wore it in the bath, Plonk. Tell them how long it took to dry.”",
-        "“Three weeks,” Plonk mutters. “Worth it.”",
+        "On the call, Doris rolls her one good eye. “Tell them about bath night, Plonk. Tell them how long it takes to dry.”",
+        "“Three weeks,” Plonk mutters. “Every time.”",
       ],
       choices: [
         { text: "Ask who the fuck Gary is", to: "gary" },
-        { text: "Ask to see the cape", to: "closet" },
+        { text: "Ask for a closer look at the cape", to: "closet" },
       ],
     },
 
@@ -369,44 +369,44 @@ const STORY = {
     closet: {
       title: "Fourteen Locks",
       text: [
-        "Plonk unlocks a closet with fourteen locks, which takes a while. Lock nine is just a very old padlock with a note that says <em>NO, DORIS</em>.",
-        "Inside, on a hanger shaped like a bat, hangs the Silverlight cape. It’s silver, it hums, and it smells like nine hundred years of Plonk.",
-        "“I’ve slept in this every night since the Dark Ages,” he says. “Days, it stays locked up in here, where Doris can’t get it. Whoever wears it can’t die. If I go without it for good, I’m dust. If Doris gets it, I’m dust, she comes back to life, and she bangs her ghost boyfriend on my good couch.”",
+        "Plonk lifts his beard. Under it, the Silverlight cape is fastened at his throat with fourteen padlocks. Lock nine is just a very old padlock with a note that says <em>NO, DORIS</em>.",
+        "The cape is silver, it hums, and it smells like nine hundred years of Plonk.",
+        "“Haven’t taken it off since the Dark Ages,” he says. “I sleep in it. I got married in it. I had the plague in it. Whoever wears it can’t die, and the second it comes off, I’m dust. If Doris gets it, I’m dust, she comes back to life, and she bangs her ghost boyfriend on my good couch.”",
         "He strokes it like a cat. You have never seen him this gentle.",
-        "“Nobody touches it,” he says, and turns around to lock the window.",
+        "“She can feel it from the grave, you know. Anywhere in this tower.” He glares around the room. “Nobody touches it,” he says, and turns around to lock the window.",
       ],
       choices: [
-        { text: "Offer to hide the cape for him", to: "hide" },
-        { text: "Try it on while his back is turned", to: "tryon" },
+        { text: "Offer to hide him somewhere she can’t feel it", to: "hide" },
+        { text: "Grab the cape while his back is turned", to: "tryon" },
       ],
     },
 
     hide: {
       title: "Cape Smuggler",
       text: [
-        "Plonk squints at you. Then he nods. “She can sense it in the tower. She can’t sense it in some idiot’s backpack.”",
-        "He folds the Silverlight cape like a flag and stuffs it into your bag. It hums against your spine. It feels incredible, like the best hug of your life, or a very confident hand.",
-        "“Guard it with your life,” Plonk says. “Or don’t. It’ll keep you alive either way.”",
-        "Halfway down the stairs, the cape starts whispering to you. Mostly it says <em>put me on</em>.",
+        "Plonk squints at you. Then he nods. “She can feel it in the tower. She can’t feel it in some idiot’s apartment.”",
+        "The cape can’t come off, so Plonk is coming too. You put a hoodie over the whole thing and a baseball cap over his beard. He looks like a very old man about to rob a pharmacy.",
+        "“If anyone asks,” he says, “I’m your grandpa.”",
+        "Halfway down the stairs, the cape starts whispering to you. Mostly it says <em>put me on</em>. Sometimes it says <em>he’s so old</em>.",
       ],
       choices: [
-        { text: "Take it home and hide it", to: "capehome" },
-        { text: "Put it on the second you get home", to: "keepcape" },
+        { text: "Take him home and hide him", to: "capehome" },
+        { text: "Squeeze under the cape with him the second you get home", to: "keepcape" },
       ],
     },
 
     tryon: {
-      title: "Try It On",
+      title: "Hands Off",
       text: [
-        "You throw the cape over your shoulders.",
+        "You grab the bottom of the cape.",
         "Every hair on your body stands up, including some you didn’t know you had. Your back stops hurting. Your knee stops clicking. You can suddenly see without squinting.",
-        "You feel like you could live forever. You realize you probably can.",
-        "Plonk turns around from the window. His face goes through about nine hundred years of feelings in two seconds.",
-        "“Take,” he says. “It. Off.”",
+        "Turns out you don’t have to wear it. Touching it counts. You feel like you could live forever. You realize you probably can.",
+        "Plonk turns around from the window. The cape turns with him, and so do you. His face goes through about nine hundred years of feelings in two seconds.",
+        "“Let,” he says. “Go.”",
       ],
       choices: [
         { text: "Run for it", to: "capesprint" },
-        { text: "Keep it on and stare him down", to: "spell" },
+        { text: "Hold on and stare him down", to: "spell" },
       ],
     },
 
@@ -414,27 +414,28 @@ const STORY = {
       title: "Your Apartment",
       text: [
         "Your apartment is a studio above a potion shop. It smells like burnt sage and someone else’s regret.",
-        "Your cat, Firmware, takes one look at the cape and pisses on the rug.",
-        "You hang the cape on the shower rod, where it hums and lights up the bathroom like a nightclub. While you’re brushing your teeth, the mirror fogs over.",
+        "Your cat, Firmware, takes one look at Plonk and pisses on the rug.",
+        "Plonk takes your bed, your last beer, and the good pillow. The cape hums and lights up the whole studio like a nightclub. “She’ll never find me here,” he says.",
+        "While you’re brushing your teeth, the bathroom mirror fogs over.",
         "Words write themselves in the steam: <em>WE NEED TO TALK, SWEETIE.</em>",
       ],
       choices: [
         { text: "Wipe the mirror", to: "dorismirror" },
-        { text: "Ignore it and put the cape on", to: "keepcape" },
+        { text: "Ignore it and squeeze under the cape with Plonk", to: "keepcape" },
       ],
     },
 
     capesprint: {
       title: "Cape Run",
       text: [
-        "You run.",
-        "You take the stairs four at a time, then eight, then you think, <em>fuck it, I can’t die</em>, and jump out the nearest window.",
-        "You hit the moat like a cannonball. It’s cold, it’s full of eels, and you are completely fine. A little turned on, honestly. That might be the cape.",
-        "Up in the tower, Plonk leans out the window and throws a slipper at you. “THIEF! I KNOW WHERE YOU WORK!”",
+        "You run. You don’t let go, so Plonk comes too.",
+        "You take the stairs four at a time, then eight, with a nine-hundred-year-old wizard flapping behind you like a kite. Then you think, <em>fuck it, we can’t die</em>, and jump out the nearest window.",
+        "You both hit the moat like cannonballs. It’s cold, it’s full of eels, and you are completely fine. A little turned on, honestly. That might be the cape.",
+        "Plonk comes up next to you with an eel in his beard. “THIEF!” he screams. “I KNOW WHERE YOU WORK!”",
         "He does. He filed the ticket.",
       ],
       choices: [
-        { text: "Go home and lay low", to: "capehome" },
+        { text: "Drag him home and lay low", to: "capehome" },
         { text: "Duck into a gas station bathroom to dry off", to: "dorismirror" },
       ],
     },
@@ -450,17 +451,16 @@ const STORY = {
         "Outside the bathroom door, you hear the slap of Plonk’s slippers, getting closer.",
       ],
       choices: [
-        { text: "Give the cape back to Plonk", to: "capereturn" },
-        { text: "Open the door, hand Plonk the cape, and point at the mirror", to: "tilldeath" },
+        { text: "Tell Plonk what she said", to: "capereturn" },
+        { text: "Open the door and point Plonk at the mirror", to: "tilldeath" },
       ],
     },
 
     capereturn: {
-      title: "Bringing It Back",
+      title: "Tonight",
       text: [
-        "You hand Plonk the cape. He snatches it and hugs it like a lost dog.",
-        "Then you tell him what Doris said. All of it. The grave. The forty years. Gary and Thursday.",
-        "Plonk doesn’t say anything. He looks older than you’ve ever seen him, which is saying something.",
+        "You open the door and tell Plonk what Doris said. All of it. The grave. The forty years. Gary and Thursday.",
+        "Plonk doesn’t say anything. He fiddles with lock nine, the one that says <em>NO, DORIS</em>. He looks older than you’ve ever seen him, which is saying something.",
         "“Tonight?” he finally asks.",
         "“Tonight.”",
         "He nods. Then he looks at you sideways. “I suppose you want a tip.”",
@@ -474,15 +474,14 @@ const STORY = {
     keepcape: {
       title: "Immortal",
       text: [
-        "You put on the cape and immediately become the most powerful idiot alive.",
-        "You eat gas station sushi. Nothing. You microwave a fork. Nothing. You text your ex “u up,” and when they say no, you feel nothing. You are a god.",
-        "Three days go by. You don’t sleep. You don’t need to. You learn the banjo. You do some things in the cape that you will not be telling anyone about.",
-        "On the fourth day, someone starts pounding on your door.",
-        "“I KNOW YOU’RE IN THERE,” Plonk screams. “I CAN HEAR THE BANJO.”",
+        "You squeeze under the cape next to Plonk and immediately become the most powerful idiot alive. Plonk hates it. He can’t exactly leave.",
+        "You eat gas station sushi. Nothing. You microwave a fork. Nothing. You text your ex “u up,” and when they say no, you feel nothing. You are a god, with a nine-hundred-year-old man breathing on your neck.",
+        "Three days go by. You don’t sleep. You don’t need to. You learn the banjo. You do some things in the cape that you will not be telling anyone about. Plonk was there. He’s not talking about it either.",
+        "On the fourth day, Plonk snaps. “Play that banjo one more time,” he says, very calmly, “and I will turn you into my next orb.”",
       ],
       choices: [
         { text: "Hide in the bathroom", to: "dorismirror" },
-        { text: "Open the door", to: "spell" },
+        { text: "Play it one more time", to: "spell" },
       ],
     },
 
@@ -490,7 +489,7 @@ const STORY = {
       title: "Doris’s Grave",
       text: [
         "By sundown, you and Plonk are standing in the cemetery, in front of a crooked headstone: <em>DORIS. BELOVED WIFE. STILL MAD.</em>",
-        "He’s holding a bunch of dead flowers. “They’re for a dead woman,” he mutters. “It’s fine.” The Silverlight cape hangs over his arm.",
+        "He’s holding a bunch of dead flowers. “They’re for a dead woman,” he mutters. “It’s fine.” The Silverlight cape hangs off his shoulders, humming.",
         "“Forty years,” he says to the stone. “I’m sorry. The stairs. And also I’m an asshole.”",
         "The ground glows, and Doris rises out of it with her arms crossed. She looks at him for a long time. Then she looks at the cape.",
         "“If I take this off,” Plonk says quietly, “I’m dust. Nine hundred years of dust, all at once.”",
@@ -924,7 +923,7 @@ const STORY = {
         "He teaches you a drinking song about Doris. Every verse rhymes with “bitch.” There are forty verses.",
         "At some point, you’re both lying on the floor. Plonk points at the ceiling. “See that stain? That’s from our wedding night.”",
         "You don’t ask.",
-        "He rolls over and squints at a closet in the corner. “Wanna see something cool?” he slurs. “Or wanna see a magic trick?”",
+        "He rolls over and starts digging around in his beard. “Wanna see something cool?” he slurs. “Or wanna see a magic trick?”",
       ],
       choices: [
         { text: "Ask to see the cool thing", to: "closet" },
@@ -1551,7 +1550,7 @@ const STORY = {
       ending: true,
       text: [
         "“It’s okay,” you tell him. “Go.”",
-        "Plonk looks at you. He looks at Doris. Then he holds the Silverlight cape out at arm’s length, the way you’d hold a dirty diaper, and lets go.",
+        "Plonk looks at you. He looks at Doris. Then he undoes the locks on the Silverlight cape, all fourteen of them, which takes a while. He holds it out at arm’s length, the way you’d hold a dirty diaper, and lets go.",
         "Nine hundred years hit him all at once. His beard goes white, then gray, then gone. “Oh, shit,” he says. “I forgot to feed the—” And then he’s a little pile of dust in a very old suit.",
         "The dust sneezes, and Plonk’s ghost steps out of it, blinking. Doris is waiting. She punches him in the arm. Then she kisses him, and it’s gross, and it’s lovely, and some of her face comes off on his.",
         "Somewhere, Gary, her shirtless ghost boyfriend, shrugs and goes to visit his mom.",
