@@ -98,7 +98,9 @@
     document.title = passage.title ? `${passage.title} · Hex Support` : "Hex Support";
   }
 
-  function render() {
+  // `jump` scrolls the page so the new scene's title is at the top. It's off
+  // for the first page load, so the map is the first thing you see.
+  function render(jump) {
     const id = currentId();
     const passage = STORY.passages[id];
 
@@ -119,7 +121,8 @@
     endingsFound.textContent = `Endings found: ${found} of ${endings.length}`;
     centerMapOn(mapSvg.querySelector(".map-node.current rect"));
 
-    window.scrollTo(0, 0);
+    if (jump) titleEl.scrollIntoView({ block: "start" });
+    else window.scrollTo(0, 0);
     titleEl.focus({ preventScroll: true });
   }
 
@@ -134,7 +137,7 @@
 
   function goToStart() {
     lastId = null;
-    if (currentId() === STORY.start) render();
+    if (currentId() === STORY.start) render(true);
     else location.hash = STORY.start;
   }
 
@@ -148,6 +151,6 @@
     goToStart();
   });
 
-  window.addEventListener("hashchange", render);
+  window.addEventListener("hashchange", () => render(true));
   render();
 })();

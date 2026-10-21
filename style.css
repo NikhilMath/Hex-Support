@@ -233,6 +233,7 @@ body {
 
 #passage-title {
   margin: 0 0 1rem;
+  scroll-margin-top: 1rem;
   font-size: 2rem;
   line-height: 1.2;
 }
