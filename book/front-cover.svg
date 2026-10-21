@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1800" width="1200" height="1800">
+  <!-- The front cover, 6x9 in at 200 units per inch, drawn on a clear
+       background: tools/paperback-cover.js puts the night sky, the stars and
+       the desk (its top edge at y=1490) behind it, so they run on across the
+       spine and the back. -->
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#8fd3ff" stop-opacity="0.55"/>
+      <stop offset="0.45" stop-color="#7a6cff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#5b3fa6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb" cx="0.42" cy="0.36" r="0.68">
+      <stop offset="0" stop-color="#f2fbff"/>
+      <stop offset="0.22" stop-color="#9fdcff"/>
+      <stop offset="0.55" stop-color="#5a86ee"/>
+      <stop offset="0.85" stop-color="#3f2c9c"/>
+      <stop offset="1" stop-color="#24195e"/>
+    </radialGradient>
+    <linearGradient id="brass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7a5a1e"/>
+      <stop offset="0.35" stop-color="#e2bd62"/>
+      <stop offset="0.6" stop-color="#b58b34"/>
+      <stop offset="1" stop-color="#5e4416"/>
+    </linearGradient>
+    <linearGradient id="titlebar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3d2a8c"/>
+      <stop offset="1" stop-color="#6a4fd0"/>
+    </linearGradient>
+    <path id="ghost" d="M-0.5,0.55 L-0.5,-0.05 A0.5,0.5 0 0 1 0.5,-0.05 L0.5,0.55 Q0.417,0.45 0.333,0.55 Q0.25,0.65 0.167,0.55 Q0.083,0.45 0,0.55 Q-0.083,0.65 -0.167,0.55 Q-0.25,0.45 -0.333,0.55 Q-0.417,0.65 -0.5,0.55 Z"/>
+    <g id="ghost-face">
+      <use href="#ghost" fill="#f4f1ff" fill-opacity="0.93"/>
+      <ellipse cx="-0.17" cy="-0.06" rx="0.07" ry="0.1" fill="#24195e"/>
+      <ellipse cx="0.17" cy="-0.06" rx="0.07" ry="0.1" fill="#24195e"/>
+      <ellipse cx="0" cy="0.17" rx="0.075" ry="0.1" fill="#24195e"/>
+    </g>
+  </defs>
+
+  <!-- Title -->
+  <text x="600" y="168" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="34" letter-spacing="10" fill="#b9b0dc">A PICK-YOUR-PATH COMEDY</text>
+  <text x="600" y="455" text-anchor="middle" font-family="Georgia, serif" font-weight="bold" font-size="320" letter-spacing="-8" fill="#f6f1e4">Hex</text>
+  <text x="600" y="618" text-anchor="middle" font-family="Georgia, serif" font-weight="bold" font-style="italic" font-size="178" letter-spacing="-3" fill="#bcaaff">Support</text>
+  <text x="600" y="712" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="50" fill="#ddd6f0">Tech support for a 900-year-old wizard.</text>
+
+  <!-- Glow behind the orb -->
+  <circle cx="600" cy="1140" r="500" fill="url(#glow)"/>
+
+  <!-- Ghosts -->
+  <use href="#ghost-face" transform="translate(250 835) rotate(-14) scale(140)"/>
+  <g transform="translate(1010 1290) rotate(10) scale(122)">
+    <!-- Counsel for the deceased wears a tie. -->
+    <use href="#ghost" fill="#f4f1ff" fill-opacity="0.93"/>
+    <ellipse cx="-0.17" cy="-0.06" rx="0.07" ry="0.1" fill="#24195e"/>
+    <ellipse cx="0.17" cy="-0.06" rx="0.07" ry="0.1" fill="#24195e"/>
+    <path d="M-0.1,0.14 Q0,0.1 0.1,0.14" fill="none" stroke="#24195e" stroke-width="0.04" stroke-linecap="round"/>
+    <path d="M-0.04,0.25 L0.04,0.25 L0.027,0.3 L0.065,0.47 L0,0.54 L-0.065,0.47 L-0.027,0.3 Z" fill="#24195e"/>
+  </g>
+
+  <!-- Back half of the stand's ring, behind the orb -->
+  <ellipse cx="600" cy="1352" rx="160" ry="30" fill="#5e4416"/>
+
+  <!-- The orb -->
+  <circle cx="600" cy="1140" r="255" fill="url(#orb)"/>
+  <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-opacity="0.16" stroke-width="10">
+    <path d="M470,1050 C520,990 640,985 700,1030"/>
+  </g>
+  <ellipse cx="505" cy="1010" rx="100" ry="52" transform="rotate(-32 505 1010)" fill="#ffffff" fill-opacity="0.38"/>
+  <ellipse cx="455" cy="1085" rx="20" ry="12" transform="rotate(-50 455 1085)" fill="#ffffff" fill-opacity="0.32"/>
+  <use href="#ghost-face" transform="translate(338 1205) rotate(-22) scale(104)"/>
+  <!-- Loading spinner, stuck forever -->
+  <g transform="translate(600 1150)" fill="#ffffff">
+    <rect x="-11" y="-92" width="22" height="46" rx="11" opacity="1"/>
+    <rect x="-11" y="-92" width="22" height="46" rx="11" opacity="0.88" transform="rotate(45)"/>
+    <rect x="-11" y="-92" width="22" height="46" rx="11" opacity="0.76" transform="rotate(90)"/>
+    <rect x="-11" y="-92" width="22" height="46" rx="11" opacity="0.64" transform="rotate(135)"/>
+    <rect x="-11" y="-92" width="22" height="46" rx="11" opacity="0.52" transform="rotate(180)"/>
+    <rect x="-11" y="-92" width="22" height="46" rx="11" opacity="0.4" transform="rotate(225)"/>
+    <rect x="-11" y="-92" width="22" height="46" rx="11" opacity="0.3" transform="rotate(270)"/>
+    <rect x="-11" y="-92" width="22" height="46" rx="11" opacity="0.2" transform="rotate(315)"/>
+  </g>
+
+  <!-- The stand: front of the ring, the stem and the base -->
+  <path d="M440,1352 A160,30 0 0 0 760,1352 L760,1372 A160,30 0 0 1 440,1372 Z" fill="url(#brass)"/>
+  <path d="M545,1398 L655,1398 L630,1440 L570,1440 Z" fill="url(#brass)"/>
+  <ellipse cx="600" cy="1494" rx="160" ry="12" fill="#000000" fill-opacity="0.3"/>
+  <path d="M470,1458 C470,1440 520,1432 600,1432 C680,1432 730,1440 730,1458 L730,1470 C730,1488 680,1494 600,1494 C520,1494 470,1488 470,1470 Z" fill="url(#brass)"/>
+
+  <!-- Your coffee. It's lukewarm, so no steam. -->
+  <ellipse cx="258" cy="1496" rx="96" ry="10" fill="#000000" fill-opacity="0.3"/>
+  <g transform="translate(265 1352)">
+    <path d="M-62,40 C-112,40 -112,110 -62,110" fill="none" stroke="#e9e4f5" stroke-width="16"/>
+    <rect x="-66" y="0" width="132" height="142" rx="16" fill="#e9e4f5"/>
+    <ellipse cx="0" cy="4" rx="62" ry="10" fill="#4a2f1c"/>
+    <path d="M0,42 L30,59 L30,93 L0,110 L-30,93 L-30,59 Z" fill="#5b3fa6"/>
+    <text x="0" y="86" text-anchor="middle" font-family="Georgia, serif" font-weight="bold" font-size="36" fill="#ffffff">H</text>
+  </g>
+
+  <!-- The error box popping out of the orb -->
+  <g transform="translate(-34 0)">
+    <rect x="702" y="772" width="440" height="228" rx="12" fill="#000000" fill-opacity="0.35"/>
+    <rect x="690" y="760" width="440" height="228" rx="12" fill="#efedf6" stroke="#1d1440" stroke-width="3"/>
+    <path d="M690,772 A12,12 0 0 1 702,760 L1118,760 A12,12 0 0 1 1130,772 L1130,810 L690,810 Z" fill="url(#titlebar)" stroke="#1d1440" stroke-width="3"/>
+    <text x="712" y="795" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="25" fill="#ffffff">orb.exe</text>
+    <rect x="1084" y="769" width="34" height="32" rx="6" fill="#d9534f"/>
+    <path d="M1092,777 L1110,793 M1110,777 L1092,793" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+    <path d="M740,838 L770,890 L710,890 Z" fill="#f2c230" stroke="#1d1440" stroke-width="3" stroke-linejoin="round"/>
+    <rect x="737" y="853" width="6" height="21" rx="3" fill="#1d1440"/>
+    <circle cx="740" cy="882" r="3.6" fill="#1d1440"/>
+    <text x="792" y="876" font-family="Arial, Helvetica, sans-serif" font-size="34" fill="#1d1440">Please... kill me.</text>
+    <rect x="826" y="916" width="132" height="48" rx="8" fill="#ffffff" stroke="#1d1440" stroke-width="3"/>
+    <rect x="832" y="922" width="120" height="36" rx="5" fill="none" stroke="#6a4fd0" stroke-width="2" stroke-dasharray="4 4"/>
+    <text x="892" y="949" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="25" fill="#1d1440">Yes</text>
+    <rect x="976" y="916" width="132" height="48" rx="8" fill="#ffffff" stroke="#1d1440" stroke-width="3"/>
+    <text x="1042" y="949" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="25" fill="#1d1440">No</text>
+  </g>
+
+  <!-- Author -->
+  <text x="600" y="1690" text-anchor="middle" font-family="Georgia, serif" font-size="68" letter-spacing="2" fill="#f6f1e4">Nikhil Math</text>
+</svg>
